@@ -33,15 +33,15 @@ public class VolumeZoneController : MonoBehaviour
     private void Awake()
     {
         playerTransform = player.transform;
-        emitter = GetComponent<FMODUnity.StudioEventEmitter>();
+        //emitter = GetComponent<FMODUnity.StudioEventEmitter>();
     }
     private void Start()
     {
 
 
-        musicInstance = RuntimeManager.CreateInstance(musicEvent);
-        musicInstance.start();
-        musicInstance.release(); //Även om jag releasar så kan man pausa osv, förstår inte riktigt
+        //musicInstance = RuntimeManager.CreateInstance(musicEvent);
+        //musicInstance.start();
+        //musicInstance.release(); //Även om jag releasar så kan man pausa osv, förstår inte riktigt
         
     }
 
