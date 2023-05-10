@@ -52,7 +52,7 @@ public class CactiAttack : MonoBehaviour
 
     private IEnumerator ChargeRoutine()
     {
-        Time.timeScale = 0.1f;
+        //Time.timeScale = 0.1f;
         isAttacking = true;
         isTurning = true;
 

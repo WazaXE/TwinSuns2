@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Idle : MonoBehaviour
 {
-    public Transform playerTransform;
+    //public Transform playerTransform;
     [HideInInspector] public ChasePlayer chasePlayer;
     [SerializeField]
     private float timeBeforeChase = 3.0f;

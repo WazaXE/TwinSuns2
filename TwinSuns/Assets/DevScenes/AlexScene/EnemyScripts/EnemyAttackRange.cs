@@ -9,7 +9,8 @@ public class EnemyAttackRange : MonoBehaviour
 
     public LayerMask enemyLayerMask;
     public float attackRange = 1f;
-    public GameObject player;
+    public Transform playerCenter;
+    public Collider playerCollider;
     private RaycastHit hit;
 
     public bool isInRange;
@@ -20,10 +21,10 @@ public class EnemyAttackRange : MonoBehaviour
 
     void Update()
     {
-        Ray ray = new Ray(transform.position, (player.transform.position - transform.position));
+        Ray ray = new Ray(transform.position, (playerCenter.transform.position - transform.position));
         if (Physics.Raycast(ray, out hit, attackRange, ~enemyLayerMask))
         {
-            if (hit.collider.gameObject == player)
+            if (hit.collider == playerCollider)
             {
                 navMeshAgent.isStopped = true;
                 isInRange = true;
@@ -36,6 +37,6 @@ public class EnemyAttackRange : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, (player.transform.position - transform.position).normalized * attackRange);
+        Gizmos.DrawRay(transform.position, (playerCenter.transform.position - transform.position).normalized * attackRange);
     }
 }
