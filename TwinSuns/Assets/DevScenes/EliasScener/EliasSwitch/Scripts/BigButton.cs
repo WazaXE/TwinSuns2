@@ -32,6 +32,7 @@ public class BigButton : MonoBehaviour, IInteractable
 
     public void OnInteractionClick()
     {
+        buttonPressed?.Invoke();
 
             if (name == "BigButton1")
             {
@@ -49,7 +50,9 @@ public class BigButton : MonoBehaviour, IInteractable
                 lamp2.GetComponent<Renderer>().material.color = Color.green;
 
             }
-        }
+
+
+    }
 
            
 
