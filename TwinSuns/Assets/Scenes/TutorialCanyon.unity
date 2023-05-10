@@ -52385,7 +52385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1584770324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53232,7 +53232,7 @@ PrefabInstance:
     - target: {fileID: 4352781954837358038, guid: b8775cc1c4c22a742a843df9c585b9c1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4554848147728703849, guid: b8775cc1c4c22a742a843df9c585b9c1,
         type: 3}
@@ -53341,7 +53341,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 958
   attackRange: 4
-  player: {fileID: 0}
+  playerCenter: {fileID: 0}
+  playerCollider: {fileID: 0}
   isInRange: 0
 --- !u!114 &1605119243
 MonoBehaviour:
@@ -53397,7 +53398,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745975078fe12814987b4e12d7f66736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
   chasePlayer: {fileID: 0}
   timeBeforeChase: 8.5
 --- !u!114 &1605119246
@@ -71675,7 +71675,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7784201, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
