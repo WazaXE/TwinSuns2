@@ -40,6 +40,7 @@ public class CombatState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
         /*
         stateMachine.attack.performed -= Attack;
         stateMachine.dash.performed -= Dash;
@@ -61,9 +62,7 @@ public class CombatState : PlayerState
         combatEndTimer -= Time.deltaTime;
         if (combatEndTimer <= 0)
         {
-            stateMachine.inCombat = false;
             stateMachine.Transit(stateMachine.freeState);
-            stateMachine.weaponHandler.SheathWeapon();
         }
     }
 

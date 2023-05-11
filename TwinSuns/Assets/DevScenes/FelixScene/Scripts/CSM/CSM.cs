@@ -17,6 +17,9 @@ public class CSM : MonoBehaviour
 
     public List<Transform> toFollow = new List<Transform>();
 
+    public float attackCD = 5f;
+    public bool canAttack = true;
+
     private void Awake()
     {
         idleState.OnValidate(this);
@@ -66,10 +69,10 @@ public class CSM : MonoBehaviour
         currentState.FixedUpdate();
     }
 
-    public Vector3 ReturnClosestFollow()
+    public Transform ReturnClosestFollow()
     {
         toFollow = toFollow.OrderBy(x => Vector3.Distance(transform.position, x.position)).ToList();
-        return toFollow[0].position;
+        return toFollow[0];
     }
 
 }
