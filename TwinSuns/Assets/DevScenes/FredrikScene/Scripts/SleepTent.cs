@@ -23,6 +23,8 @@ public class SleepTent : MonoBehaviour, IInteractable
     private bool needToBeInside;
     public bool NeedToBeInside => needToBeInside;
 
+    [SerializeField] private GameObject exitDialogue;
+
 
     //Start is called before the first frame update
     void Start()
@@ -55,6 +57,7 @@ public class SleepTent : MonoBehaviour, IInteractable
         Night.SetActive(false);
         Day.SetActive(true);
         exitToFireTemple.SetActive(true);
+        exitDialogue.SetActive(false);
     }
     public void InteractInRange()
     {

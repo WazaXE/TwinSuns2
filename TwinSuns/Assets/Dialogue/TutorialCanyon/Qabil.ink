@@ -46,13 +46,13 @@ Finally, have you decided to help me?  #speaker:Qabil #portrait:mentor #layout:r
 
 * [Yes]
 
-Yes, let's find that abacus #speaker:Nim #portrait:mentor #layout:right 
+Yes, let's find that abacus #speaker:Nim #portrait:mentor #layout:left 
 
 -> acceptQuest
 
 * [No]
 
-Sorry, I still don't have the time! #speaker:Nim #portrait:mentor #layout:right 
+Sorry, I still don't have the time! #speaker:Nim #portrait:mentor #layout:left 
 
 -> END
 
@@ -61,7 +61,7 @@ Sorry, I still don't have the time! #speaker:Nim #portrait:mentor #layout:right
 
 May fortune smile upon you, Nim! I think the abacus should be somewhere around camp. #speaker:Qabil #portrait:mentor #layout:right
 
-I will try to find it for you, Qabil. #speaker:Nim #portrait:mentor #layout:right 
+I will try to find it for you, Qabil. #speaker:Nim #portrait:mentor #layout:left 
 
 -> END
 
