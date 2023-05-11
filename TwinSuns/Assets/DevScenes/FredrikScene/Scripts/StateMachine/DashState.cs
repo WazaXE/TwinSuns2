@@ -91,15 +91,16 @@ public class DashState : PlayerState
 
         if (timer > dashTime)
         {
+            if (stateMachine.inCombat)
+            {
+                stateMachine.Transit(stateMachine.combatState);
+                return;
+            }
             stateMachine.Transit(stateMachine.freeState);
+            return;
         }
-        else
-        {
-            Roll();
-        }
+        Roll();
         timer += Time.fixedDeltaTime;
-
-
     }
 
     private void Roll()

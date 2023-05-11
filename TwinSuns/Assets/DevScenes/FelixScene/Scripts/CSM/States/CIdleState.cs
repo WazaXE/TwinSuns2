@@ -9,7 +9,7 @@ public class CIdleState : CState
     {
         base.FixedUpdate();
 
-        if (stateMachine.vision.InRange(stateMachine.ReturnClosestFollow()))
+        if (stateMachine.vision.InRange(stateMachine.ReturnClosestFollow().position))
         {
             stateMachine.Transit(stateMachine.chaseState);
         }

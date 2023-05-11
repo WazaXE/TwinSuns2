@@ -26,6 +26,9 @@ public class FreeState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        stateMachine.inCombat = false;
+        stateMachine.weaponHandler.SheathWeapon();
         /*
         stateMachine.attack.performed += Attack;
         stateMachine.dash.performed += Dash;
