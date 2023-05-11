@@ -13868,17 +13868,26 @@ MonoBehaviour:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
+        time: -0.19166565
+        value: -0.00074005127
+        inSlope: 2.6865494
+        outSlope: 2.6865494
         tangentMode: 34
         weightedMode: 0
         inWeight: 0
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.3
-        value: 1
+        time: 0.1792505
+        value: 0.99574447
+        inSlope: 0.0054073334
+        outSlope: 0.0054073334
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.40000257
+        value: 1.0023608
         inSlope: -0.01669083
         outSlope: -0.01669083
         tangentMode: 0
@@ -13901,12 +13910,12 @@ MonoBehaviour:
     stateMachine: {fileID: 4238921984177129662}
     listenToInput: 1
     doGravity: 1
-    secondsBeforeCombatEnds: 8
+    secondsBeforeCombatEnds: 7
   attackState:
     stateMachine: {fileID: 4238921984177129662}
     listenToInput: 0
     doGravity: 1
-    percentageToCallNextAttack: 0.5
+    percentageToCallNextAttack: 0.4
   interactState:
     stateMachine: {fileID: 4238921984177129662}
     listenToInput: 0
@@ -13915,9 +13924,9 @@ MonoBehaviour:
     stateMachine: {fileID: 4238921984177129662}
     listenToInput: 0
     doGravity: 0
-    enchantCooldown: 10
-    enchantDuration: 8
-    timeInsideState: 0.5
+    enchantCooldown: 5
+    enchantDuration: 5
+    timeInsideState: 0.2
   playerMovement:
     moveAcceleration: 80
     maxSpeed: 3.5
