@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.AI;
 
-[RequireComponent(typeof(EntityVision), typeof(EntityHealth))]
+[RequireComponent(typeof(EntityVision), typeof(EntityHealth), typeof(NavMeshAgent))]
+[RequireComponent(typeof(Rigidbody))]
 public class CSM : MonoBehaviour
 {
     CState currentState;
@@ -15,10 +17,15 @@ public class CSM : MonoBehaviour
     public EntityVision vision;
     public EntityHealth health;
 
+    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public Rigidbody rb;
+
     public List<Transform> toFollow = new List<Transform>();
 
     public float attackCD = 5f;
     public bool canAttack = true;
+
+    [HideInInspector] public Transform currentTarget;
 
     private void Awake()
     {
@@ -38,6 +45,7 @@ public class CSM : MonoBehaviour
 
         vision = GetComponent<EntityVision>();
         health = GetComponent<EntityHealth>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
 
     }
 
@@ -73,6 +81,13 @@ public class CSM : MonoBehaviour
     {
         toFollow = toFollow.OrderBy(x => Vector3.Distance(transform.position, x.position)).ToList();
         return toFollow[0];
+    }
+
+    public IEnumerator AttackCoolDown()
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(attackCD);
+        canAttack = true;
     }
 
 }
