@@ -5,6 +5,8 @@ INCLUDE ../../DevScenes/FredrikScene/Dialogue/GlobalVariables.ink
 
 { Tutorial_EndSection: -> main | -> accepted }
 
+-> fallback
+
 ===main===
 
 ~ Tutorial_EndSection = false
@@ -20,5 +22,12 @@ Ok Chief, I will see you tomorrow. #speaker:Nim #portrait:mentor #layout:left
 ===accepted=== 
 
 Nim, you have helped enough already. You should take it easy and rest in one of the tents now.  #speaker:Chief Turum #portrait:mentor #layout:right 
+
+-> END
+
+
+=== fallback ===
+
+Please go and help the others in the camp Nim. They are gonna need your help getting the camp ready #speaker:Chief Turum #portrait:mentor #layout:right 
 
 -> END
