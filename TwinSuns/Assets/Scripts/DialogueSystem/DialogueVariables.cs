@@ -74,11 +74,18 @@ public class DialogueVariables
         if (globalVariablesStory != null)
         {
             //Load current state of variables
-            //VariablesToStory(globalVariablesStory);
+            VariablesToStory(globalVariablesStory);
 
             //This will have to be remade in the future if we want a better save system
-            //PlayerPrefs.SetString(saveVariablesKey, globalVariablesStory.state.ToJson());
+            PlayerPrefs.SetString(saveVariablesKey, globalVariablesStory.state.ToJson());
         }
+    }
+
+    public void SetVariable(string variableName, bool variableBool)
+    {
+
+        globalVariablesStory.variablesState[variableName] = variableBool;
+
     }
 
 }
