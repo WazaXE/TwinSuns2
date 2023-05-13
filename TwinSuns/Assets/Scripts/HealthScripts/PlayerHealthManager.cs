@@ -14,17 +14,6 @@ public class PlayerHealthManager : MonoBehaviour, IPlayerDamageable
     public float health;
 
 
-    private void OnEnable()
-    {
-        //WellSave.OnPlayerRestore += RestoreHealth();
-    }
-
-    private void OnDisable()
-    {
-        //WellSave.OnPlayerRestore -= RestoreHealth();
-    }
-
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -48,6 +37,7 @@ public class PlayerHealthManager : MonoBehaviour, IPlayerDamageable
         //Execute this code whenever player restores health
 
         health = maxHealth;
+        OnPlayerDamaged?.Invoke();
     }
 
 }

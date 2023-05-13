@@ -16,18 +16,30 @@ public class RespawnZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+
+        IPlayerDamageable collisionWithPlayer = other.GetComponent<IPlayerDamageable>();
+
+
+
+
+        if (collisionWithPlayer != null)
         {
+
             if (!checkPointHandler)
             {
                 Debug.LogError("RespawnZone: Tried to respawn the player at the last checkpoint, but the scene seems to be missing a checkpoint handler.");
                 return;
             }
-            CharacterController playerController = other.gameObject.GetComponent<CharacterController>();
-            playerController.enabled = false;
-            other.gameObject.transform.position = checkPointHandler.Respawnpoint.position;
-            playerController.enabled = true;
+
+            collisionWithPlayer.TakeDamage();
+
+
+        CharacterController playerController = other.gameObject.GetComponent<CharacterController>();
+        playerController.enabled = false;
+        other.gameObject.transform.position = checkPointHandler.Respawnpoint.position;
+        playerController.enabled = true;
         }
+
     }
 
 }

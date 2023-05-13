@@ -13,16 +13,20 @@ public class WellSave : MonoBehaviour, IInteractable
     private bool needToBeInside;
     public bool NeedToBeInside => needToBeInside;
 
-    public static event Action OnPlayerRestore;
+    public static event Action OnPlayerSave;
 
     [SerializeField] private GameObject wellBadWater;
     [SerializeField] private GameObject wellClearWater;
 
+    private bool firstInteract;
+
     public void OnInteractionClick()
     {
-        wellBadWater.SetActive(false);
-        wellClearWater.SetActive(true);
-        OnPlayerRestore?.Invoke();
+        if (!firstInteract)
+        {
+            wellBadWater.SetActive(false);
+            wellClearWater.SetActive(true);
+        }
     }
 
     private void Toggler()
