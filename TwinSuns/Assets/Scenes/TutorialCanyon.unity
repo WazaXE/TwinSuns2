@@ -818,7 +818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33602882}
   - component: {fileID: 33602884}
-  - component: {fileID: 33602883}
+  - component: {fileID: 33602885}
   m_Layer: 0
   m_Name: Interact (1)
   m_TagString: Untagged
@@ -841,27 +841,6 @@ Transform:
   m_Father: {fileID: 70920963}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -269.999, z: 0}
---- !u!114 &33602883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 33602881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3be1e51a110c2c4d8426dbdd51f0af5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barkText: {fileID: 0}
-  barkTexts:
-  - 
-  random: 0
-  timedBarks: 0
-  timeBetweenBarks: 2
-  lockX: 0
-  lockY: 0
-  lockZ: 0
 --- !u!212 &33602884
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -914,6 +893,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &33602885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33602881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b0acabef9fbb94f824be45f336059f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockX: 0
+  lockY: 0
+  lockZ: 0
 --- !u!4 &33650812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4338461531958374332, guid: d0ebb8b940018304b82d3a40335126de,
@@ -12181,7 +12175,6 @@ Transform:
   - {fileID: 70920963}
   - {fileID: 1979758411}
   - {fileID: 1467344004}
-  - {fileID: 914994553}
   m_Father: {fileID: 1540755987}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15165,7 +15158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &443380064 stripped
 Transform:
@@ -16226,7 +16219,7 @@ PrefabInstance:
     - target: {fileID: 8799591376251421308, guid: 82b864acd02ad954aa7abf7880a52dcb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8799591376251421308, guid: 82b864acd02ad954aa7abf7880a52dcb,
         type: 3}
@@ -17224,7 +17217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &504975181
 PrefabInstance:
@@ -18100,6 +18093,7 @@ MonoBehaviour:
   plankBreak:
     m_PersistentCalls:
       m_Calls: []
+  breakTime: 0.5
 --- !u!136 &531478668
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20112,7 +20106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 611005725}
   - component: {fileID: 611005727}
-  - component: {fileID: 611005726}
+  - component: {fileID: 611005728}
   m_Layer: 0
   m_Name: Interact
   m_TagString: Untagged
@@ -20135,27 +20129,6 @@ Transform:
   m_Father: {fileID: 1467344004}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -269.999, z: 0}
---- !u!114 &611005726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 611005724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3be1e51a110c2c4d8426dbdd51f0af5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barkText: {fileID: 0}
-  barkTexts:
-  - 
-  random: 0
-  timedBarks: 0
-  timeBetweenBarks: 2
-  lockX: 0
-  lockY: 0
-  lockZ: 0
 --- !u!212 &611005727
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20208,6 +20181,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &611005728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611005724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b0acabef9fbb94f824be45f336059f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockX: 0
+  lockY: 0
+  lockZ: 0
 --- !u!1001 &611716304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21077,7 +21065,7 @@ Transform:
   - {fileID: 1449313431}
   - {fileID: 1330253388}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &642856062
 PrefabInstance:
@@ -23983,7 +23971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722291455}
   - component: {fileID: 722291457}
-  - component: {fileID: 722291456}
+  - component: {fileID: 722291458}
   m_Layer: 0
   m_Name: Interact (2)
   m_TagString: Untagged
@@ -24006,27 +23994,6 @@ Transform:
   m_Father: {fileID: 1979758411}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -269.999, z: 0}
---- !u!114 &722291456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722291454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3be1e51a110c2c4d8426dbdd51f0af5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barkText: {fileID: 0}
-  barkTexts:
-  - 
-  random: 0
-  timedBarks: 0
-  timeBetweenBarks: 2
-  lockX: 0
-  lockY: 0
-  lockZ: 0
 --- !u!212 &722291457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24079,6 +24046,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &722291458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722291454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b0acabef9fbb94f824be45f336059f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockX: 0
+  lockY: 0
+  lockZ: 0
 --- !u!4 &727032789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5030892698107585592, guid: 3431c5779a1a9ba4792a008e825e24d9,
@@ -31010,13 +30992,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914994552}
   m_LocalRotation: {x: -0, y: 0.40171573, z: -0, w: 0.91576445}
-  m_LocalPosition: {x: -25.563507, y: -19.809069, z: -56.219856}
+  m_LocalPosition: {x: 53, y: 0, z: 21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1725704637}
-  m_Father: {fileID: 380209049}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 47.371, z: 0}
 --- !u!114 &914994554
 MonoBehaviour:
@@ -31030,7 +31012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e07db7a83d6a8c46836cb7fbad46199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needToBeInside: 1
+  needToBeInside: 0
   variableName: bolani_quest_finished
   variableBoolValue: 1
   loadGlobalsJSON: {fileID: 4900000, guid: c7f822d3c9ca922499a188931872b76e, type: 3}
@@ -31635,7 +31617,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &936974910 stripped
 Transform:
@@ -38456,6 +38438,7 @@ MonoBehaviour:
   plankBreak:
     m_PersistentCalls:
       m_Calls: []
+  breakTime: 0.5
 --- !u!1001 &1102691348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40600,6 +40583,7 @@ MonoBehaviour:
   plankBreak:
     m_PersistentCalls:
       m_Calls: []
+  breakTime: 0.5
 --- !u!136 &1149010822
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -42619,7 +42603,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1209726783
 PrefabInstance:
@@ -55038,7 +55022,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1584770328
 MonoBehaviour:
@@ -57300,6 +57284,7 @@ MonoBehaviour:
   plankBreak:
     m_PersistentCalls:
       m_Calls: []
+  breakTime: 0.5
 --- !u!4 &1643284872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7707809373772788831, guid: 59c7ccb4c21a03c41b498057e7e4b922,
@@ -59246,7 +59231,7 @@ Transform:
   - {fileID: 440557931}
   - {fileID: 109794932}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1686751886
 MonoBehaviour:
@@ -63632,6 +63617,7 @@ MonoBehaviour:
   plankBreak:
     m_PersistentCalls:
       m_Calls: []
+  breakTime: 0.5
 --- !u!136 &1801098832
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -72983,7 +72969,7 @@ Transform:
   - {fileID: 1929894516}
   - {fileID: 1134713603}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2077268971
 PrefabInstance:
@@ -74358,7 +74344,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7755102, y: 1}
+    m_SensorSize: {x: 1.7780173, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

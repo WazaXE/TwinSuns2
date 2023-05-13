@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
 
 
 
@@ -31,9 +32,7 @@ public class FetchQuest : MonoBehaviour, IInteractable
 
     public void OnInteractionClick()
     {
-        Debug.Log("Hej");
-        dialogueVariables.SetVariable(variableName, variableBoolValue);
-        Destroy(this.gameObject);
+
     }
 
     private void Toggler()
@@ -41,7 +40,9 @@ public class FetchQuest : MonoBehaviour, IInteractable
     }
     public void InteractInRange()
     {
-
+        Debug.Log("Hej");
+        dialogueVariables.SetVariable(variableName, variableBoolValue);
+        Destroy(this.gameObject);
     }
     public void InteractOutOfRange()
     {

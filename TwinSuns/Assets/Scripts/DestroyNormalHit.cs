@@ -11,6 +11,8 @@ public class DestroyNormalHit : MonoBehaviour, IDamageable
     [SerializeField] private UnityEvent notFireHit;
     [SerializeField] private UnityEvent plankBreak;
 
+    [SerializeField] private float breakTime = 0.5f;
+
     public void TakeDamage(int damage, DamageType dType = DamageType.Normal)
     {
         Hit(dType);
@@ -33,7 +35,7 @@ public class DestroyNormalHit : MonoBehaviour, IDamageable
 
     IEnumerator Destroy()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(breakTime);
 
 
         Destroy(this.gameObject);
