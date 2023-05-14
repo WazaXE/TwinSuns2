@@ -81,11 +81,4 @@ public class DialogueVariables
         }
     }
 
-    public void SetVariable(string variableName, bool variableBool)
-    {
-
-        globalVariablesStory.variablesState[variableName] = variableBool;
-
-    }
-
 }

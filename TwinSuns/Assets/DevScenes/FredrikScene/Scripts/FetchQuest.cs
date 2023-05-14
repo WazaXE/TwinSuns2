@@ -19,20 +19,22 @@ public class FetchQuest : MonoBehaviour, IInteractable
     [SerializeField] private string variableName;
     [SerializeField] private bool variableBoolValue;
 
-    [Header("Load Global JSON")]
-    [SerializeField] private TextAsset loadGlobalsJSON;
+    [SerializeField] private TextAsset inkAsset;
 
-    private DialogueVariables dialogueVariables;
-
+    private Story inkStory;
 
     private void Awake()
     {
-        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
+        string inkText = inkAsset.text;
+        inkStory = new Story(inkText);
     }
+
+
 
     public void OnInteractionClick()
     {
-
+        inkStory.variablesState[variableName] = variableBoolValue;
+        Destroy(this.gameObject);
     }
 
     private void Toggler()
@@ -40,9 +42,7 @@ public class FetchQuest : MonoBehaviour, IInteractable
     }
     public void InteractInRange()
     {
-        Debug.Log("Hej");
-        dialogueVariables.SetVariable(variableName, variableBoolValue);
-        Destroy(this.gameObject);
+
     }
     public void InteractOutOfRange()
     {
