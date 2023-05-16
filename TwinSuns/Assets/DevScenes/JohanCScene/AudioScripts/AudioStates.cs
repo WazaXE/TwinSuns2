@@ -25,6 +25,25 @@ public class AudioStates : MonoBehaviour
         audioManTwin.playerAudio.PlayerJumpAudio(playerPlayer);
     }
 
+    public void PlayerMeleePlay()
+    {
+        audioManTwin.playerAudio.PlayerMeleeAudio(playerPlayer);
+    }
+
+    public void PlayerDamagePlay()
+    {
+        audioManTwin.playerAudio.PlayerDamageAudio(playerPlayer);
+    }
+
+    public void PlayerClimbPlay()
+    {
+        audioManTwin.playerAudio.PlayerLadderClimbAudio(playerPlayer);
+    }
+
+    public void PlayerRollPlay()
+    {
+        audioManTwin.playerAudio.PlayerRollAudio(playerPlayer);
+    }
     public void CactiAlertPlay()
     {
         audioManTwin.enemyCactiAudio.CactiAlertAudio(cactiObject);

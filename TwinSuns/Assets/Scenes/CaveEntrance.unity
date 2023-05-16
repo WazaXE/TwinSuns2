@@ -245,11 +245,11 @@ MonoBehaviour:
       Path: event:/Player/Footsteps/Footsteps
     playerDamageEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -659892842
+        Data2: 1309042136
+        Data3: -1710622019
+        Data4: -2074342266
+      Path: event:/Player/Damaged/Player_Damaged
     playerMeleeEvent:
       Guid:
         Data1: 330870612
@@ -259,11 +259,11 @@ MonoBehaviour:
       Path: event:/Player/Weapons/Sword_Attack/Sword Swing
     playerDeathEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -69167363
+        Data2: 1340641104
+        Data3: -1343222111
+        Data4: 1090482292
+      Path: event:/Player/Damaged/Player_Death
     playerJumpEvent:
       Guid:
         Data1: -1420869692
@@ -273,11 +273,11 @@ MonoBehaviour:
       Path: event:/Player/Other Movement/Jump
     playerLandingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1599030776
+        Data2: 1321717057
+        Data3: 271832984
+        Data4: -1595245512
+      Path: event:/Player/Other Movement/Land
     playerRollEvent:
       Guid:
         Data1: 1479451641
@@ -287,26 +287,40 @@ MonoBehaviour:
       Path: event:/Player/Other Movement/Roll
     playerMeleeFireEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1443615327
+        Data2: 1262971374
+        Data3: -1538891381
+        Data4: 1816480497
+      Path: event:/Player/Weapons/Sword_Attack/Sword Swing Fire
+    playerFireballEvent:
+      Guid:
+        Data1: 1623602466
+        Data2: 1268445964
+        Data3: 1065712011
+        Data4: 447666112
+      Path: event:/Player/Weapons/Player_Fireball_1
+    playerLadderClimbEvent:
+      Guid:
+        Data1: 1035428462
+        Data2: 1117477664
+        Data3: 1285757099
+        Data4: 1606380355
+      Path: event:/Player/Actions/Ladder_Climb_1
   interactablesAudio:
     pickupItemEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 920473758
+        Data2: 1317513390
+        Data3: 815095700
+        Data4: -1059724938
+      Path: event:/Player/Actions/Pickup_Item
     CoinEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 824232351
+        Data2: 1337561477
+        Data3: -1766794341
+        Data4: -1077903798
+      Path: event:/Interactables/Pickup_Coin_Bag_1
     cactusDestroyedEvent:
       Guid:
         Data1: 922519784
@@ -351,11 +365,11 @@ MonoBehaviour:
       Path: 
     swordFiredEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 347729650
+        Data2: 1164598988
+        Data3: 1313492104
+        Data4: 1974371892
+      Path: event:/Interactables/Sword_Fire_1
     CheckpointEvent:
       Guid:
         Data1: 0
@@ -377,6 +391,34 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    wallThrowerEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    pistonForwardEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    pistonBackwardsEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    ladderEnableEvent:
+      Guid:
+        Data1: -1816378525
+        Data2: 1265454689
+        Data3: 323841969
+        Data4: -662324869
+      Path: event:/Interactables/Ladder_Fall_Out_1
   menuAudio:
     menuHoverEvent:
       Guid:
@@ -414,6 +456,27 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    bookOpenEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    bookClosingEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    buttonPressEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
   enemyCactiAudio:
     cactiAlertEvent:
       Guid:
@@ -421,56 +484,56 @@ MonoBehaviour:
         Data2: 1155962323
         Data3: 1903598005
         Data4: -1867302986
-      Path: event:/Enemy Cactus/Ca_Alert
+      Path: event:/Enemy Cactus/Actions/Ca_Alert
     cactiDeathEvent:
       Guid:
         Data1: -1268976305
         Data2: 1124387300
         Data3: 2078843528
         Data4: 301741200
-      Path: event:/Enemy Cactus/Ca_Death
+      Path: event:/Enemy Cactus/Battle/Ca_Death
     cactiDamageEvent:
       Guid:
         Data1: -433452555
         Data2: 1155518469
         Data3: -1927012435
         Data4: -2059317687
-      Path: event:/Enemy Cactus/Ca_Damage
+      Path: event:/Enemy Cactus/Battle/Ca_Damage
     cactiFootstepEvent:
       Guid:
         Data1: 1485840786
         Data2: 1272908645
         Data3: 958116249
         Data4: 1710650920
-      Path: event:/Enemy Cactus/Ca_Foosteps
+      Path: event:/Enemy Cactus/Actions/Ca_Foosteps
     cactiJumpEvent:
       Guid:
         Data1: -846328782
         Data2: 1196982587
         Data3: 1113582753
         Data4: 1785800786
-      Path: event:/Enemy Cactus/Ca_Jump
+      Path: event:/Enemy Cactus/Actions/Ca_Jump
     cactiLandEvent:
       Guid:
         Data1: 907977766
         Data2: 1278826689
         Data3: -916830809
         Data4: -1912796320
-      Path: event:/Enemy Cactus/Ca_Land
+      Path: event:/Enemy Cactus/Actions/Ca_Land
     cactiBlinkEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 907977766
+        Data2: 1278826689
+        Data3: -916830809
+        Data4: -1912796320
+      Path: event:/Enemy Cactus/Actions/Ca_Land
     cactiLookEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1118180597
+        Data2: 1272999739
+        Data3: -1010330749
+        Data4: -1397446774
+      Path: event:/Enemy Cactus/Actions/Ca_Look_Around
   enemySkeletonAudio:
     skeletonDeathEvent:
       Guid:
@@ -3878,7 +3941,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5647059, y: 1}
+    m_SensorSize: {x: 1.6487525, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
