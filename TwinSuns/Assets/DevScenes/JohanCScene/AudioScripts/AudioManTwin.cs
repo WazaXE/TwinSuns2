@@ -35,6 +35,12 @@ public class AudioManTwin : MonoBehaviour
         public EventReference playerMeleeFireEvent;
         private EventInstance playerMeleeFireInstance;
 
+        public EventReference playerFireballEvent;
+        private EventInstance playerFireballInstance;
+
+        public EventReference playerLadderClimbEvent;
+        private EventInstance playerLadderClimbInstance;
+
         public void PlayerFootstepAudio(GameObject playerPlayer, string surface)
         {
             playerFootstepInstance = RuntimeManager.CreateInstance(playerFootstepEvent);
@@ -77,7 +83,7 @@ public class AudioManTwin : MonoBehaviour
         }
 
         public void PlayerLandingAudio(GameObject playerPlayer)
-              {
+        {
 
                 playerLandingInstance = RuntimeManager.CreateInstance(playerLandingEvent);
 
@@ -87,7 +93,34 @@ public class AudioManTwin : MonoBehaviour
                 playerLandingInstance.start();
 
                 playerLandingInstance.release(); 
-              }
+        }
+
+        public void PlayerLadderClimbAudio(GameObject playerPlayer)
+        {
+
+            playerLadderClimbInstance = RuntimeManager.CreateInstance(playerLadderClimbEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerLadderClimbInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerLadderClimbInstance.start();
+
+            playerLadderClimbInstance.release();
+        }
+
+
+        public void PlayerFireballAudio(GameObject playerPlayer)
+        {
+
+            playerFireballInstance = RuntimeManager.CreateInstance(playerFireballEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerFireballInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerFireballInstance.start();
+
+            playerFireballInstance.release();
+        }
 
         public void PlayerRollAudio(GameObject playerPlayer)
         {
@@ -242,6 +275,19 @@ public class AudioManTwin : MonoBehaviour
         public EventReference metallWallSmallEvent;
         public EventInstance metallWallSmallInstance;
 
+        public EventReference wallThrowerEvent;
+        public EventInstance wallThrowerInstance;
+
+        public EventReference pistonForwardEvent;
+        public EventInstance pistonForwardInstance;
+
+        public EventReference pistonBackwardsEvent;
+        public EventInstance pistonBackwardsInstance;
+
+        public EventReference ladderEnableEvent;
+        public EventInstance ladderEnableInstance;
+
+
 
         public void BoardBreakAudio(GameObject boardbreakObject)
         {
@@ -259,6 +305,82 @@ public class AudioManTwin : MonoBehaviour
                 boardBreakInstance.start();
                 boardBreakInstance.release();
                 Debug.Log("boardbreak");
+            }
+        }
+
+        public void LadderEnableAudio(GameObject ladderEnableObject)
+        {
+            if (ladderEnableEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for ladderEnable is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                ladderEnableInstance = RuntimeManager.CreateInstance(ladderEnableEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(ladderEnableInstance, ladderEnableObject.transform,
+                    ladderEnableObject.GetComponent<Rigidbody>());
+
+                ladderEnableInstance.start();
+                ladderEnableInstance.release();
+                Debug.Log("ladderEnable");
+            }
+        }
+
+        public void WallThrowerAudio(GameObject wallThrowerObject)
+        {
+            if (wallThrowerEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for wallThrower is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                wallThrowerInstance = RuntimeManager.CreateInstance(wallThrowerEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(wallThrowerInstance, wallThrowerObject.transform,
+                    wallThrowerObject.GetComponent<Rigidbody>());
+
+                wallThrowerInstance.start();
+                wallThrowerInstance.release();
+                Debug.Log("wallThrower");
+            }
+        }
+
+        public void PistonForwardAudio(GameObject pistonForwardObject)
+        {
+            if (pistonForwardEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for pistonForward is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                pistonForwardInstance = RuntimeManager.CreateInstance(pistonForwardEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(pistonForwardInstance, pistonForwardObject.transform,
+                    pistonForwardObject.GetComponent<Rigidbody>());
+
+                pistonForwardInstance.start();
+                pistonForwardInstance.release();
+                Debug.Log("pistonForward");
+            }
+        }
+
+        public void PistonBackwardsAudio(GameObject pistonBackwardsObject)
+        {
+            if (pistonBackwardsEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for pistonBackwards is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                pistonBackwardsInstance = RuntimeManager.CreateInstance(pistonBackwardsEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(pistonBackwardsInstance, pistonBackwardsObject.transform,
+                    pistonBackwardsObject.GetComponent<Rigidbody>());
+
+                pistonBackwardsInstance.start();
+                pistonBackwardsInstance.release();
+                Debug.Log("pistonBackwards");
             }
         }
 
@@ -334,7 +456,7 @@ public class AudioManTwin : MonoBehaviour
 
                 metallWallSmallInstance.start();
                 metallWallSmallInstance.release();
-                Debug.Log("metallSmallLarge");
+                Debug.Log("metallSmallsmall");
             }
         }
 
@@ -531,6 +653,15 @@ public class AudioManTwin : MonoBehaviour
         public EventReference scrollFoldingEvent;
         public EventInstance scrollFoldingInstance;
 
+        public EventReference bookOpenEvent;
+        public EventInstance bookOpenInstance;
+
+        public EventReference bookClosingEvent;
+        public EventInstance bookClosingInstance;
+
+        public EventReference buttonPressEvent;
+        public EventInstance buttonPressInstance;
+
 
 
 
@@ -592,6 +723,66 @@ public class AudioManTwin : MonoBehaviour
 
                 scrollFoldingInstance.release();
                 Debug.Log("scrollFolding");
+            }
+        }
+
+        public void BookOpenAudio(GameObject bookOpenObject)
+        {
+            if (bookOpenEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for bookOpen is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                bookOpenInstance = RuntimeManager.CreateInstance(bookOpenEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(bookOpenInstance, bookOpenObject.transform,
+                    bookOpenObject.GetComponent<Rigidbody>());
+
+                bookOpenInstance.start();
+
+                bookOpenInstance.release();
+                Debug.Log("bookOpen");
+            }
+        }
+
+        public void BookClosingAudio(GameObject bookClosingObject)
+        {
+            if (bookClosingEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for bookClosing is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                bookClosingInstance = RuntimeManager.CreateInstance(bookClosingEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(bookClosingInstance, bookClosingObject.transform,
+                    bookClosingObject.GetComponent<Rigidbody>());
+
+                bookClosingInstance.start();
+
+                bookClosingInstance.release();
+                Debug.Log("bookClosing");
+            }
+        }
+
+        public void ButtonPressAudio(GameObject buttonPressObject)
+        {
+            if (buttonPressEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for buttonPress is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                buttonPressInstance = RuntimeManager.CreateInstance(buttonPressEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(buttonPressInstance, buttonPressObject.transform,
+                    buttonPressObject.GetComponent<Rigidbody>());
+
+                buttonPressInstance.start();
+
+                buttonPressInstance.release();
+                Debug.Log("buttonPress");
             }
         }
     }

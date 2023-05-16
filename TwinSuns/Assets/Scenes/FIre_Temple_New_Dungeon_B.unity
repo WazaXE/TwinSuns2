@@ -3251,6 +3251,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &866653553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866653554}
+  - component: {fileID: 866653555}
+  m_Layer: 0
+  m_Name: AudioStates
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &866653554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866653553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1662371538}
+  m_Father: {fileID: 2063010340}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866653555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866653553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10a36aec1002dd499806c426345cce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPlayer: {fileID: 0}
+  cactiObject: {fileID: 0}
+  skeletonObject: {fileID: 0}
 --- !u!1 &902210973
 GameObject:
   m_ObjectHideFlags: 0
@@ -4652,6 +4700,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4329021780344025546}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1378347233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378347234}
+  m_Layer: 0
+  m_Name: Ambiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1378347234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378347233}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063010340}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1385622259 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4238921984177129659, guid: ce31b26169c327a4c91b184923055265,
@@ -4811,6 +4890,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581471734}
   m_CullTransparentMesh: 1
+--- !u!1 &1662371537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1662371538}
+  m_Layer: 0
+  m_Name: playerPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1662371538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662371537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 866653554}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682527146
 GameObject:
   m_ObjectHideFlags: 0
@@ -6647,7 +6757,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7784201, y: 1}
+    m_SensorSize: {x: 2.1880999, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6678,6 +6788,461 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8565756488440587592}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2063010336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063010340}
+  - component: {fileID: 2063010339}
+  - component: {fileID: 2063010338}
+  - component: {fileID: 2063010337}
+  m_Layer: 0
+  m_Name: AudioManTwin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2063010337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063010336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc452765307f2e4eb8689efa38c648e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  booleanScriptable: {fileID: 11400000, guid: 4ed73a180ddf6e24da1389ac78c1cda4, type: 2}
+  studioEventEmitter: {fileID: 0}
+--- !u!114 &2063010338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063010336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6260e709f2c2da46b72096f6852def1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2063010339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063010336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc24016c1a22274e9be56d19a7f6f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAudio:
+    playerFootstepEvent:
+      Guid:
+        Data1: -276013830
+        Data2: 1120419449
+        Data3: 1118558601
+        Data4: -194983462
+      Path: event:/Player/Footsteps/Footsteps
+    playerDamageEvent:
+      Guid:
+        Data1: -659892842
+        Data2: 1309042136
+        Data3: -1710622019
+        Data4: -2074342266
+      Path: event:/Player/Damaged/Player_Damaged
+    playerMeleeEvent:
+      Guid:
+        Data1: 330870612
+        Data2: 1138891248
+        Data3: -914851692
+        Data4: 1027997744
+      Path: event:/Player/Weapons/Sword_Attack/Sword Swing
+    playerDeathEvent:
+      Guid:
+        Data1: -69167363
+        Data2: 1340641104
+        Data3: -1343222111
+        Data4: 1090482292
+      Path: event:/Player/Damaged/Player_Death
+    playerJumpEvent:
+      Guid:
+        Data1: -1420869692
+        Data2: 1194356327
+        Data3: -1776521553
+        Data4: -466216429
+      Path: event:/Player/Other Movement/Jump
+    playerLandingEvent:
+      Guid:
+        Data1: 1599030776
+        Data2: 1321717057
+        Data3: 271832984
+        Data4: -1595245512
+      Path: event:/Player/Other Movement/Land
+    playerRollEvent:
+      Guid:
+        Data1: 1479451641
+        Data2: 1122631771
+        Data3: -740135265
+        Data4: -538897143
+      Path: event:/Player/Other Movement/Roll
+    playerMeleeFireEvent:
+      Guid:
+        Data1: 1443615327
+        Data2: 1262971374
+        Data3: -1538891381
+        Data4: 1816480497
+      Path: event:/Player/Weapons/Sword_Attack/Sword Swing Fire
+    playerFireballEvent:
+      Guid:
+        Data1: 1623602466
+        Data2: 1268445964
+        Data3: 1065712011
+        Data4: 447666112
+      Path: event:/Player/Weapons/Player_Fireball_1
+    playerLadderClimbEvent:
+      Guid:
+        Data1: 1035428462
+        Data2: 1117477664
+        Data3: 1285757099
+        Data4: 1606380355
+      Path: event:/Player/Actions/Ladder_Climb_1
+  interactablesAudio:
+    pickupItemEvent:
+      Guid:
+        Data1: 920473758
+        Data2: 1317513390
+        Data3: 815095700
+        Data4: -1059724938
+      Path: event:/Player/Actions/Pickup_Item
+    CoinEvent:
+      Guid:
+        Data1: 824232351
+        Data2: 1337561477
+        Data3: -1766794341
+        Data4: -1077903798
+      Path: event:/Interactables/Pickup_Coin_Bag_1
+    cactusDestroyedEvent:
+      Guid:
+        Data1: -1838876834
+        Data2: 1268032333
+        Data3: -1464782689
+        Data4: -1436941035
+      Path: event:/Interactables/Melee_Wood_Impact_1
+    buildingEvent:
+      Guid:
+        Data1: -370595280
+        Data2: 1128606862
+        Data3: -1757871963
+        Data4: 126971624
+      Path: event:/Interactables/Hammering_Wood_1
+    boardBreakEvent:
+      Guid:
+        Data1: -1955673293
+        Data2: 1280452175
+        Data3: -1153078354
+        Data4: -611454237
+      Path: event:/Interactables/Wood_Board_Break_1
+    boardDodgeEvent:
+      Guid:
+        Data1: 159528339
+        Data2: 1201596747
+        Data3: 633167278
+        Data4: -1399724709
+      Path: event:/Interactables/Wood_Board_Dodge_1
+    boardFireEvent:
+      Guid:
+        Data1: -1955673293
+        Data2: 1280452175
+        Data3: -1153078354
+        Data4: -611454237
+      Path: event:/Interactables/Wood_Board_Break_1
+    lightTempleEvent:
+      Guid:
+        Data1: 1104288882
+        Data2: 1308025420
+        Data3: -245962306
+        Data4: -469207993
+      Path: event:/Objects/Lights_ON
+    swordFiredEvent:
+      Guid:
+        Data1: 347729650
+        Data2: 1164598988
+        Data3: 1313492104
+        Data4: 1974371892
+      Path: event:/Interactables/Sword_Fire_1
+    CheckpointEvent:
+      Guid:
+        Data1: 366203773
+        Data2: 1129124622
+        Data3: 1621338254
+        Data4: 292870957
+      Path: event:/Checkpoints/Water_Well_CP_1
+    metallWallLargeEvent:
+      Guid:
+        Data1: -287246127
+        Data2: 1293713828
+        Data3: 642490799
+        Data4: 681592397
+      Path: event:/Interactables/Metall_Wall_Large_1
+    metallWallSmallEvent:
+      Guid:
+        Data1: 645355496
+        Data2: 1081128449
+        Data3: 1088315280
+        Data4: -1944772326
+      Path: event:/Interactables/Metall_Wall_Small_1
+    wallThrowerEvent:
+      Guid:
+        Data1: -32821663
+        Data2: 1083245145
+        Data3: 50923430
+        Data4: 424464878
+      Path: event:/Objects/Fireball_Loop
+    pistonForwardEvent:
+      Guid:
+        Data1: 1053299362
+        Data2: 1229983415
+        Data3: -1504065352
+        Data4: 1760071076
+      Path: event:/Interactables/Piston_Forward_1
+    pistonBackwardsEvent:
+      Guid:
+        Data1: -1769446794
+        Data2: 1273724793
+        Data3: -1268768633
+        Data4: -896892013
+      Path: event:/Interactables/Piston_Backward_1
+    ladderEnableEvent:
+      Guid:
+        Data1: -1816378525
+        Data2: 1265454689
+        Data3: 323841969
+        Data4: -662324869
+      Path: event:/Interactables/Ladder_Fall_Out_1
+  menuAudio:
+    menuHoverEvent:
+      Guid:
+        Data1: -324280641
+        Data2: 1232433312
+        Data3: 115571076
+        Data4: 41592092
+      Path: event:/Menu/Menu_Hover/Menu_Hover
+    menuPressEvent:
+      Guid:
+        Data1: -1903519290
+        Data2: 1256231408
+        Data3: 1038062210
+        Data4: -974715233
+      Path: event:/Menu/Menu_Press/Menu_Press
+  objectAudio:
+    weedThumbleEvent:
+      Guid:
+        Data1: 323186529
+        Data2: 1279651997
+        Data3: -669500023
+        Data4: -1921750192
+      Path: event:/Objects/Tumble Weed
+    scrollUnfoldingEvent:
+      Guid:
+        Data1: -1984318606
+        Data2: 1326168078
+        Data3: 1428273303
+        Data4: -833733156
+      Path: event:/Interactables/Scroll_Open_1
+    scrollFoldingEvent:
+      Guid:
+        Data1: -6000832
+        Data2: 1334620868
+        Data3: 123727273
+        Data4: 114204480
+      Path: event:/Interactables/Scoll_Close_1
+    bookOpenEvent:
+      Guid:
+        Data1: 1405806108
+        Data2: 1083975842
+        Data3: -677338203
+        Data4: -267670546
+      Path: event:/Objects/Book_Open
+    bookClosingEvent:
+      Guid:
+        Data1: -1488794272
+        Data2: 1178626651
+        Data3: 1430697857
+        Data4: 757678449
+      Path: event:/Objects/Book_Close
+    buttonPressEvent:
+      Guid:
+        Data1: 559805233
+        Data2: 1281080494
+        Data3: -82099553
+        Data4: -123716682
+      Path: event:/Interactables/Large_Button_Press_1
+  enemyCactiAudio:
+    cactiAlertEvent:
+      Guid:
+        Data1: -1476843317
+        Data2: 1155962323
+        Data3: 1903598005
+        Data4: -1867302986
+      Path: event:/Enemy Cactus/Ca_Alert
+    cactiDeathEvent:
+      Guid:
+        Data1: -1268976305
+        Data2: 1124387300
+        Data3: 2078843528
+        Data4: 301741200
+      Path: event:/Enemy Cactus/Ca_Death
+    cactiDamageEvent:
+      Guid:
+        Data1: -433452555
+        Data2: 1155518469
+        Data3: -1927012435
+        Data4: -2059317687
+      Path: event:/Enemy Cactus/Ca_Damage
+    cactiFootstepEvent:
+      Guid:
+        Data1: 1485840786
+        Data2: 1272908645
+        Data3: 958116249
+        Data4: 1710650920
+      Path: event:/Enemy Cactus/Ca_Foosteps
+    cactiJumpEvent:
+      Guid:
+        Data1: -846328782
+        Data2: 1196982587
+        Data3: 1113582753
+        Data4: 1785800786
+      Path: event:/Enemy Cactus/Ca_Jump
+    cactiLandEvent:
+      Guid:
+        Data1: 907977766
+        Data2: 1278826689
+        Data3: -916830809
+        Data4: -1912796320
+      Path: event:/Enemy Cactus/Ca_Land
+    cactiBlinkEvent:
+      Guid:
+        Data1: -418222403
+        Data2: 1117694685
+        Data3: 819625915
+        Data4: 1769660450
+      Path: event:/Enemy Cactus/Actions/Ca_Blink
+    cactiLookEvent:
+      Guid:
+        Data1: -1118180597
+        Data2: 1272999739
+        Data3: -1010330749
+        Data4: -1397446774
+      Path: event:/Enemy Cactus/Actions/Ca_Look_Around
+  enemySkeletonAudio:
+    skeletonDeathEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    skeletonMeleeEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    skeletonFootstepEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    skeletonDamagedEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    skeletonShieldBreakEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    skeletonShieldBlockEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+  golemThrowerAudio:
+    golemThrowerEvent:
+      Guid:
+        Data1: -927844196
+        Data2: 1335011855
+        Data3: -236361076
+        Data4: -934316583
+      Path: event:/Golem Boss/Fire_Attack_1
+    golemEntryEvent:
+      Guid:
+        Data1: 644353239
+        Data2: 1076956751
+        Data3: -1876959355
+        Data4: 66862258
+      Path: event:/Golem Boss/Entry
+  ambianceAudio:
+    templeFiresEvent:
+      Guid:
+        Data1: -32821663
+        Data2: 1083245145
+        Data3: 50923430
+        Data4: 424464878
+      Path: event:/Objects/Fireball_Loop
+  musicAudio:
+    tutorialMusicEvent:
+      Guid:
+        Data1: 721597619
+        Data2: 1221104930
+        Data3: 1766545065
+        Data4: 748540638
+      Path: event:/Music/Tutorial Music
+    menuThemeSongEvent:
+      Guid:
+        Data1: 882246847
+        Data2: 1161465886
+        Data3: -1727254902
+        Data4: -1189140438
+      Path: event:/Music/Meny themesong
+    scriptableValueHandler: {fileID: 2063010337}
+--- !u!4 &2063010340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063010336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.0932677, y: 1.8584901, z: 11.100851}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 866653554}
+  - {fileID: 1378347234}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2078106353
 GameObject:
   m_ObjectHideFlags: 0
