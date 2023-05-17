@@ -24,16 +24,16 @@ public class DestroyNormalHit : MonoBehaviour, IDamageable
         {
             case DamageType.Normal:
                 notFireHit?.Invoke();
-                StartCoroutine(Destroy());
+                StartCoroutine(DestroyObject());
                 break;
             case DamageType.Fire:
                 fireHit?.Invoke();
-                StartCoroutine(Destroy());
+                StartCoroutine(DestroyObject());
                 break;
         }
     }
 
-    IEnumerator Destroy()
+    IEnumerator DestroyObject()
     {
         yield return new WaitForSeconds(breakTime);
 
