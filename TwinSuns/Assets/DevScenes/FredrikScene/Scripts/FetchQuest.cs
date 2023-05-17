@@ -6,14 +6,10 @@ using Ink.Runtime;
 
 
 [RequireComponent(typeof(Collider))]
-public class FetchQuest : MonoBehaviour, IInteractable
+public class FetchQuest : MonoBehaviour
 {
 
-    private bool canEnterDialogue = false;
-    public bool CanInteract => canEnterDialogue;
-
-    [SerializeField] private bool needToBeInside = true;
-    public bool NeedToBeInside => needToBeInside;
+   
 
 
     [SerializeField] private string variableName;
@@ -31,26 +27,22 @@ public class FetchQuest : MonoBehaviour, IInteractable
 
 
 
-    public void OnInteractionClick()
-    {
-        inkStory.variablesState[variableName] = variableBoolValue;
-        Destroy(this.gameObject);
-    }
 
-    private void Toggler()
-    {
-    }
-    public void InteractInRange()
-    {
 
-    }
-    public void InteractOutOfRange()
+    private void OnTriggerEnter(Collider other)
     {
+        IPlayerDamageable collided = other.GetComponent<IPlayerDamageable>();
 
-    }
-    public Vector3 ReturnPosition()
-    {
-        return Vector3.zero;
+        if (collided != null)
+        {
+            inkStory.variablesState[variableName] = variableBoolValue;
+
+            Destroy(this.gameObject);
+        }
+
+
+
+
     }
 
 
