@@ -20,6 +20,9 @@ public class ActivateTemple : MonoBehaviour, IDamageable
 
     [SerializeField]
     private TMP_Text displayText;
+
+    [SerializeField] private TMP_Text subTitle;
+
     [SerializeField]
     private float timeBeforeText = 1f;
     [SerializeField]
@@ -36,6 +39,7 @@ public class ActivateTemple : MonoBehaviour, IDamageable
     private void Start()
 {
     displayText.enabled = false;
+    subTitle.enabled = false;
 }
 
     private void TorchHit(DamageType damageType)
@@ -60,6 +64,7 @@ public class ActivateTemple : MonoBehaviour, IDamageable
     private void DisplayTextRoutine()
 {
     displayText.enabled = true;
+    subTitle.enabled = true;
     Invoke("RemoveText", timeToRemoveText);
 
 }
@@ -67,6 +72,7 @@ public class ActivateTemple : MonoBehaviour, IDamageable
   private void RemoveText()
   {
     displayText.enabled = false;
+    subTitle.enabled = false;
   }
 
     private void OpenDoors()
