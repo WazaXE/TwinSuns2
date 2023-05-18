@@ -24019,6 +24019,7 @@ GameObject:
   - component: {fileID: 693419278}
   - component: {fileID: 693419280}
   - component: {fileID: 693419279}
+  - component: {fileID: 693419281}
   m_Layer: 8
   m_Name: Trigger
   m_TagString: Untagged
@@ -24074,7 +24075,50 @@ MonoBehaviour:
   isOneshot: 0
   dialogueTriggered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 693419281}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &693419281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693419277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1259820924
+      Data2: 1093231180
+      Data3: 1081693870
+      Data4: 866861316
+    Path: event:/Voices/Kabil
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &693653705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47538,6 +47582,7 @@ GameObject:
   - component: {fileID: 1326107577}
   - component: {fileID: 1326107578}
   - component: {fileID: 1326107579}
+  - component: {fileID: 1326107580}
   m_Layer: 8
   m_Name: Trigger
   m_TagString: Untagged
@@ -47593,6 +47638,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1326107580}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &1326107578
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -47632,6 +47689,37 @@ MonoBehaviour:
     _floatValue: 0
     _intValue: 0
   eventChannel: {fileID: 11400000, guid: 7802f61615527f4468942eb633668ac6, type: 2}
+--- !u!114 &1326107580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326107574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1717495846
+      Data2: 1215845693
+      Data3: 140142238
+      Data4: 62402907
+    Path: event:/Voices/Bolani
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1329237375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51974,6 +52062,7 @@ GameObject:
   - component: {fileID: 1424970420}
   - component: {fileID: 1424970421}
   - component: {fileID: 1424970422}
+  - component: {fileID: 1424970423}
   m_Layer: 8
   m_Name: Trigger
   m_TagString: Untagged
@@ -52016,7 +52105,19 @@ MonoBehaviour:
   isOneshot: 0
   dialogueTriggered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1424970423}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &1424970422
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -52030,6 +52131,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1424970423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424970419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -619121844
+      Data2: 1092842895
+      Data3: 687345574
+      Data4: 1969871659
+    Path: event:/Voices/Chief turum
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1427360972
 GameObject:
   m_ObjectHideFlags: 0
@@ -70362,6 +70494,7 @@ GameObject:
   - component: {fileID: 1929894516}
   - component: {fileID: 1929894517}
   - component: {fileID: 1929894518}
+  - component: {fileID: 1929894519}
   m_Layer: 8
   m_Name: Trigger
   m_TagString: Untagged
@@ -70417,7 +70550,50 @@ MonoBehaviour:
   isOneshot: 0
   dialogueTriggered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1929894519}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1929894519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929894515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2034071356
+      Data2: 1093538970
+      Data3: 974233490
+      Data4: -925277306
+    Path: event:/Voices/Nim
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1930357529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76943,7 +77119,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0716846, y: 1}
+    m_SensorSize: {x: 2.1789773, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
