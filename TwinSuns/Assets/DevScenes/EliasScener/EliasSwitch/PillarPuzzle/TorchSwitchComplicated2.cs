@@ -14,7 +14,24 @@ public class TorchSwitchComplicated2 : MonoBehaviour, IDamageable
     [SerializeField]
     private GameObject fire;
 
-    private bool litOrNot = true;
+    [SerializeField] private bool litOrNot = true;
+
+    private void Awake()
+    {
+        fire.SetActive(litOrNot);
+
+        if(litOrNot)
+        {
+            pillar1.SetBool("out", true);
+            pillar2.SetBool("out", true);
+        } else
+        {
+            pillar1.SetBool("out", false);
+            pillar2.SetBool("out", false);
+        }
+
+    }
+
 
     public void TakeDamage(int damage, DamageType dType = DamageType.Normal) //I detta fall ska den g� s�nder direkt �nd�
     {

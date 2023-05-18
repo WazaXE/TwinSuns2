@@ -256,8 +256,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: <b>The TEMPLE OF THE SCARLET DUNES</b>
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 84cf587f58e1d29429dc96c77d37ddbf, type: 2}
+  m_sharedMaterial: {fileID: 8208434906961163537, guid: 84cf587f58e1d29429dc96c77d37ddbf,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1537,17 +1538,17 @@ PrefabInstance:
     - target: {fileID: 4238921984177129661, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -49
+      value: -143
       objectReference: {fileID: 0}
     - target: {fileID: 4238921984177129661, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4238921984177129661, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4238921984177129661, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
@@ -2887,7 +2888,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744545125}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -49, y: 17.355265, z: 5.3168}
+  m_LocalPosition: {x: -143, y: 23.355267, z: -0.68320125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4711,7 +4712,7 @@ PrefabInstance:
     - target: {fileID: 2065463470563626948, guid: 82b864acd02ad954aa7abf7880a52dcb,
         type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7777778
+      value: 1.7780173
       objectReference: {fileID: 0}
     - target: {fileID: 2065463470563626955, guid: 82b864acd02ad954aa7abf7880a52dcb,
         type: 3}
@@ -4960,8 +4961,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Home of Nari, the Efreet Sultana
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d9fb2d9ccb18a084ab2284ffa96fa007, type: 2}
+  m_sharedMaterial: {fileID: 6226814257400194989, guid: d9fb2d9ccb18a084ab2284ffa96fa007,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7281,7 +7283,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1789773, y: 1}
+    m_SensorSize: {x: 1.7780173, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7298,7 +7300,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031948449}
   m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
-  m_LocalPosition: {x: -49, y: 17.355265, z: 5.3168}
+  m_LocalPosition: {x: -143, y: 23.355267, z: -0.68320125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9220,6 +9222,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 972218929}
     m_Modifications:
+    - target: {fileID: 512995340128658601, guid: fe333d4fe88ec144e82a57b44568c1bf,
+        type: 3}
+      propertyPath: litOrNot
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1949083378918485252, guid: fe333d4fe88ec144e82a57b44568c1bf,
         type: 3}
       propertyPath: m_Name

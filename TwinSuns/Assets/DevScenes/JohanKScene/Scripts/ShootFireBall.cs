@@ -7,12 +7,21 @@ public class ShootFireBall : MonoBehaviour
     [SerializeField] private GameObject fireballPrefab;
     [SerializeField] private Transform firePoint;
 
+    [SerializeField] private float coolDown;
+
+    private float mark;
+
     private void Update()
     {
+
+        float elapsedTime = Time.time - mark;
+
         // Check if the RT button is pressed
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && (elapsedTime > coolDown))
         {
             ShootFireball();
+            mark = Time.time;
+            elapsedTime = 0;
         }
     }
 
