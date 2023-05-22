@@ -7836,7 +7836,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: DungeonKitFireTrigger_LP (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1267940278002103432, guid: 285a2e2eb883862499f5a3cee76478cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 285a2e2eb883862499f5a3cee76478cf, type: 3}
 --- !u!4 &8229034433547816503 stripped
 Transform:
@@ -7844,6 +7845,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 514472322496026166}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8752947753394574477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9104996702532027067, guid: 285a2e2eb883862499f5a3cee76478cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 514472322496026166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1408106843219336966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752947753394574477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -32821663
+      Data2: 1083245145
+      Data3: 50923430
+      Data4: 424464878
+    Path: event:/Objects/Fireball_Loop
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 3.5488968
 --- !u!1001 &626516710325439196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7987,8 +8025,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: DungeonKitFireTrigger_LP (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1267940278002103432, guid: 285a2e2eb883862499f5a3cee76478cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 285a2e2eb883862499f5a3cee76478cf, type: 3}
+--- !u!1 &8116076807439360814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9104996702532027067, guid: 285a2e2eb883862499f5a3cee76478cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1079010794092618133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &816501657202094734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8116076807439360814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -32821663
+      Data2: 1083245145
+      Data3: 50923430
+      Data4: 424464878
+    Path: event:/Objects/Fireball_Loop
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 3.6885986
 --- !u!4 &8928888152341739924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8435421245909374977, guid: 285a2e2eb883862499f5a3cee76478cf,

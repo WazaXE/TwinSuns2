@@ -9978,7 +9978,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2261311064799597853, guid: 4a7481d54da06a0428f434cc20ee9ef7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4a7481d54da06a0428f434cc20ee9ef7, type: 3}
 --- !u!4 &4017147444873941468 stripped
 Transform:
@@ -11295,6 +11296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Room_17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5361298186253499788, guid: 5a43f099060526b47b65668d9ecbfe8e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a43f099060526b47b65668d9ecbfe8e, type: 3}
