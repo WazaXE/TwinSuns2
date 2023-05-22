@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using System;
+using FMOD.Studio;
+using FMODUnity;
 
 public class ActivateTemple : MonoBehaviour, IDamageable
 {
+    public GameObject AmbianceTemple;
+
 
     [SerializeField]
     private Animator door1;
@@ -53,6 +58,7 @@ public class ActivateTemple : MonoBehaviour, IDamageable
                 Invoke("DisplayTextRoutine", timeBeforeText);
                 fire.SetActive(true);
                 fireLit?.Invoke();
+               
                 //här får ni lägga in något coolt med cameran och ljuset!
 
 
@@ -60,6 +66,7 @@ public class ActivateTemple : MonoBehaviour, IDamageable
         }
 
     }
+
 
     private void DisplayTextRoutine()
 {
