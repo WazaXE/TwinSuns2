@@ -8,6 +8,8 @@ public class PlayerHealthManager : MonoBehaviour, IPlayerDamageable
 
     public static event Action OnPlayerDamaged;
 
+    public CheckPointHandler checkPointHandler;
+
     public float maxHealth;
 
     [HideInInspector]
@@ -22,6 +24,8 @@ public class PlayerHealthManager : MonoBehaviour, IPlayerDamageable
 
         //Invoke event to refresh health so that it displays correct
         OnPlayerDamaged?.Invoke();
+
+        if (checkPointHandler == null) checkPointHandler = FindObjectOfType<CheckPointHandler>();
     }
 
     public void TakeDamage()
@@ -29,6 +33,14 @@ public class PlayerHealthManager : MonoBehaviour, IPlayerDamageable
         //Execute this code whenever player takes damage
 
         health -= 1;
+
+        if (health <= 0) {
+            health = maxHealth;
+            CharacterController playerController = gameObject.GetComponent<CharacterController>();
+            playerController.enabled = false;
+            gameObject.transform.position = checkPointHandler.Respawnpoint.position;
+            playerController.enabled = true;
+        }
         OnPlayerDamaged?.Invoke();
     }
 
