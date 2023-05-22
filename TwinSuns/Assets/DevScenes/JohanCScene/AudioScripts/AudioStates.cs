@@ -81,6 +81,16 @@ public class AudioStates : MonoBehaviour
         audioManTwin.interactablesAudio.BoardBreakAudio(playerPlayer);
     }
 
+    public void PistonIn()
+    {
+        audioManTwin.interactablesAudio.PistonForwardAudio(playerPlayer);
+    }
+
+    public void PistonOut()
+    {
+        audioManTwin.interactablesAudio.PistonBackwardsAudio(playerPlayer);
+    }
+
 
     public void CactiFootstepPlay()
     {
