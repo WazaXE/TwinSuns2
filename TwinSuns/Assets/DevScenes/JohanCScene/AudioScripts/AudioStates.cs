@@ -83,12 +83,12 @@ public class AudioStates : MonoBehaviour
 
     public void PistonIn()
     {
-        audioManTwin.interactablesAudio.PistonForwardAudio(playerPlayer);
+        audioManTwin.interactablesAudio.PistonForwardAudio(this.gameObject);
     }
 
     public void PistonOut()
     {
-        audioManTwin.interactablesAudio.PistonBackwardsAudio(playerPlayer);
+        audioManTwin.interactablesAudio.PistonBackwardsAudio(this.gameObject);
     }
 
 
