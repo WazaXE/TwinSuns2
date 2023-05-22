@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 4307056771923924862}
   - component: {fileID: 894640473152968923}
   - component: {fileID: 3138606024461167633}
+  - component: {fileID: 4157526416980582737}
   m_Layer: 0
   m_Name: DungeonKitFirelightBowl_LP
   m_TagString: Untagged
@@ -181,3 +182,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4157526416980582737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3498854893627051460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: 967207880
+      Data2: 1178438629
+      Data3: 326108040
+      Data4: -907696676
+    Path: event:/Objects/Torch
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 3.84
+  OverrideMaxDistance: 5.452339
