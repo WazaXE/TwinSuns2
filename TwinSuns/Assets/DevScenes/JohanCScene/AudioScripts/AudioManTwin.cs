@@ -72,6 +72,9 @@ public class AudioManTwin : MonoBehaviour
                 case "Rock & Pebbles":
                     playerFootstepInstance.setParameterByName("Surface", 7f);
                     break;
+                case "Carpet":
+                    playerFootstepInstance.setParameterByName("Surface", 8f);
+                    break;
             }
 
             playerFootstepInstance.start();
