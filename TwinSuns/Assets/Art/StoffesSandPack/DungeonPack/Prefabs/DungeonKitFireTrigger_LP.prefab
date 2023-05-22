@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4809696498041821092}
   - component: {fileID: 7303587568277906286}
   - component: {fileID: 6616146573313472590}
+  - component: {fileID: 1267940278002103432}
   m_Layer: 0
   m_Name: DungeonKitFireTrigger_LP
   m_TagString: Untagged
@@ -210,3 +211,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 1547843050709438862}
   timeBetweenTrap: 1
+--- !u!114 &1267940278002103432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9104996702532027067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -32821663
+      Data2: 1083245145
+      Data3: 50923430
+      Data4: 424464878
+    Path: event:/Objects/Fireball_Loop
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 2.6914978

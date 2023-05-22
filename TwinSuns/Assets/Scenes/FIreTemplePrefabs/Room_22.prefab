@@ -3207,6 +3207,7 @@ MonoBehaviour:
   pillar1: {fileID: 8842870555068891214}
   pillar2: {fileID: 8044326483902171734}
   fire: {fileID: 4444004075321003508}
+  litOrNot: 1
 --- !u!1 &4342623736024825597
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,6 +6510,7 @@ MonoBehaviour:
   pillar1: {fileID: 835884744937040826}
   pillar2: {fileID: 4438736858560568446}
   fire: {fileID: 3395713551891023397}
+  litOrNot: 1
 --- !u!1 &7798631486784455509
 GameObject:
   m_ObjectHideFlags: 0
@@ -8766,7 +8768,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9202238717674190826, guid: d2faa85230c80b04c84c25250d012b14, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d2faa85230c80b04c84c25250d012b14, type: 3}
 --- !u!1 &3758867282556445485 stripped
 GameObject:
@@ -8988,7 +8991,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9202238717674190826, guid: d2faa85230c80b04c84c25250d012b14, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d2faa85230c80b04c84c25250d012b14, type: 3}
 --- !u!1 &482130552764079778 stripped
 GameObject:
