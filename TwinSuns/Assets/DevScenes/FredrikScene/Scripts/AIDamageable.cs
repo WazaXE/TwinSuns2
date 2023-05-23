@@ -6,7 +6,7 @@ public class AIDamageable : MonoBehaviour, IDamageable
 {
     [SerializeField] private Shader whiteShader;  // The shader to switch to when hit
     private Shader originalShader;  // The original shader of the enemy
-    private Renderer enemyRenderer;  // Reference to the enemy's renderer component
+    [SerializeField] private Renderer enemyRenderer;  // Reference to the enemy's renderer component
 
     [SerializeField] private int maxHealth = 100;
     public int currentHealth;
@@ -16,7 +16,6 @@ public class AIDamageable : MonoBehaviour, IDamageable
     private void Start()
     {
         // Get the original shader from the renderer
-        enemyRenderer = GetComponent<Renderer>();
         originalShader = enemyRenderer.material.shader;
 
         currentHealth = maxHealth;
