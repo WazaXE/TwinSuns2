@@ -18,6 +18,13 @@ public class BossSwitches : MonoBehaviour, IDamageable
     private float timeSinceLastHit;
 
 
+    private void Start()
+    {
+        fire.SetActive(false);
+        pillar1.SetBool("out", false);
+    }
+
+
     public void TakeDamage(int damage, DamageType dType = DamageType.Normal) //I detta fall ska den g� s�nder direkt �nd�
     {
         TorchHit();
