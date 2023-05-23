@@ -6,11 +6,15 @@ using TMPro;
 using System;
 using FMOD.Studio;
 using FMODUnity;
+using Cinemachine;
 
 public class ActivateTemple : MonoBehaviour, IDamageable
 {
     public GameObject AmbianceTemple;
 
+    public Collider collide;
+
+   
 
     [SerializeField]
     private Animator door1;
@@ -39,6 +43,7 @@ public class ActivateTemple : MonoBehaviour, IDamageable
     public void TakeDamage(int damage, DamageType dType = DamageType.Normal) //I detta fall ska den g� s�nder direkt �nd�
     {
         TorchHit(dType);
+        collide.enabled = false;
     }
 
     private void Start()

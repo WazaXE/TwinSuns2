@@ -9251,7 +9251,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.2644377, y: 1}
+    m_SensorSize: {x: 2.6424417, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11630,6 +11630,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2836264150168932574, guid: 0650044035e567f45acc3e4532e293c2,
         type: 3}
+      propertyPath: collide
+      value: 
+      objectReference: {fileID: 7431104435235717640}
+    - target: {fileID: 2836264150168932574, guid: 0650044035e567f45acc3e4532e293c2,
+        type: 3}
       propertyPath: subTitle
       value: 
       objectReference: {fileID: 1323862328}
@@ -11725,13 +11730,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542022839719744620, guid: 0650044035e567f45acc3e4532e293c2,
         type: 3}
+      propertyPath: TriggerOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542022839719744620, guid: 0650044035e567f45acc3e4532e293c2,
+        type: 3}
       propertyPath: OverrideAttenuation
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6542022839719744620, guid: 0650044035e567f45acc3e4532e293c2,
         type: 3}
       propertyPath: OverrideMaxDistance
-      value: 214.47229
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6569518574784244351, guid: 0650044035e567f45acc3e4532e293c2,
         type: 3}
