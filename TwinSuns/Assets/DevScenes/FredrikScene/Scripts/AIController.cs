@@ -9,11 +9,15 @@ public class AIController : MonoBehaviour
     public float blockDuration = 1f;
     public float movementSpeed = 3f;
 
+    [SerializeField] private float attackDuration = 1f;
+
     private bool isBlocking = false;
     private bool canAttack = true;
     private Transform playerTransform;
     private IPlayerDamageable playerDamageable;
     private NavMeshAgent navMeshAgent;
+
+    private Animator anim;
 
     private void Start()
     {
@@ -25,6 +29,8 @@ public class AIController : MonoBehaviour
 
         // Get the NavMeshAgent component for movement
         navMeshAgent = GetComponent<NavMeshAgent>();
+
+        anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -104,8 +110,11 @@ public class AIController : MonoBehaviour
 
     private IEnumerator ResetAttackCooldown()
     {
-        yield return new WaitForSeconds(2f); // Change the cooldown duration as needed
+        anim.SetBool("isAttack", true);
+        yield return new WaitForSeconds(attackDuration); // Change the cooldown duration as needed
         canAttack = true;
+        anim.SetBool("isAttack", false);
+
     }
     private void StartBlocking()
     {
