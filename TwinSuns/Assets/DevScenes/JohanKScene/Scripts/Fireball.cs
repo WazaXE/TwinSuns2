@@ -23,7 +23,7 @@ public class Fireball : MonoBehaviour
 
     public void SetDirection(Vector3 dir)
     {
-        direction = dir;
+        direction = (dir + Vector3.up * 0.05f).normalized;
         // Adjust the fireball's rotation to face the desired direction
         transform.forward = direction;
     }
@@ -40,13 +40,14 @@ public class Fireball : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, speed * Time.deltaTime))
         {
             // Check if the raycast hit an object with the "Environment" tag
-            if (hit.collider.CompareTag("Environment"))
+            if (hit.collider.CompareTag("Enviroment"))
             {
                 Debug.Log("Collided with Environment");
+                // Destroy the fireball upon collision with any object
+                Destroy(gameObject);
             }
 
-            // Destroy the fireball upon collision with any object
-            Destroy(gameObject);
+
         }
         else
         {
