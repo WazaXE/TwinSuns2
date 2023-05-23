@@ -8,6 +8,7 @@ public class AIController : MonoBehaviour
     public float attackRange = 3f;
     public float blockDuration = 1f;
     public float movementSpeed = 3f;
+    public float detectionRange = 10f;
 
     [SerializeField] private float attackDuration = 1f;
 
@@ -16,41 +17,42 @@ public class AIController : MonoBehaviour
     private Transform playerTransform;
     private IPlayerDamageable playerDamageable;
     private NavMeshAgent navMeshAgent;
+    private NavMeshObstacle navMeshObstacle;
 
     private Animator anim;
 
     private void Start()
     {
-        // Find and store the player's transform
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-        // Get the player's damageable component
         playerDamageable = playerTransform.GetComponent<IPlayerDamageable>();
-
-        // Get the NavMeshAgent component for movement
         navMeshAgent = GetComponent<NavMeshAgent>();
-
+        navMeshObstacle = GetComponent<NavMeshObstacle>();
         anim = GetComponent<Animator>();
+
+        navMeshAgent.enabled = false;
+        navMeshObstacle.enabled = true;
     }
+
     private void Update()
     {
-        // Calculate the distance to the player
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        if (distanceToPlayer <= attackRange && canAttack)
+        if (distanceToPlayer <= detectionRange)
         {
-            Attack();
+            if (distanceToPlayer <= attackRange && canAttack)
+            {
+                Attack();
+            }
+            else if (distanceToPlayer > attackRange)
+            {
+                MoveTowardsPlayer();
+            }
         }
-        else if (distanceToPlayer > attackRange)
+        else
         {
-            // Move towards the player if they are out of attack range
-            MoveTowardsPlayer();
+            Idle();
         }
 
-        // You can add conditions for blocking here
-        // For example, if the player is using an ability, the AI can start blocking
-
-        // If the AI is currently blocking, count down the block duration
         if (isBlocking)
         {
             blockDuration -= Time.deltaTime;
@@ -62,81 +64,64 @@ public class AIController : MonoBehaviour
         }
     }
 
+    private void Idle()
+    {
+        navMeshAgent.enabled = false;
+        navMeshObstacle.enabled = true;
+        anim.SetBool("isFly", false);
+    }
+
     private void MoveTowardsPlayer()
     {
-        // Calculate the distance to the player
+        navMeshAgent.enabled = true;
+        navMeshObstacle.enabled = false;
+
         float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
 
-        // If within or very close to the attack range, stop moving
         if (distanceToPlayer <= attackRange)
         {
             navMeshAgent.isStopped = true;
+            anim.SetBool("isFly", false);
         }
         else
         {
-            // Calculate the direction from the AI to the player
-            Vector3 directionToPlayer = playerTransform.position - transform.position;
-
-            // Normalize the direction vector
-            directionToPlayer.Normalize();
-
-            // Calculate the target position within the attack range
-            Vector3 targetPosition = playerTransform.position - directionToPlayer * attackRange;
-
-            // Set the destination for the NavMeshAgent to the target position
-            navMeshAgent.SetDestination(targetPosition);
-
-            // Adjust the NavMeshAgent's speed to the desired movement speed
+            navMeshAgent.SetDestination(playerTransform.position);
             navMeshAgent.speed = movementSpeed;
-
-            // Resume movement
             navMeshAgent.isStopped = false;
+            anim.SetBool("isFly", true);
         }
     }
 
     private void Attack()
     {
-        // Trigger the attack animation or any other attack-related behavior
-
-        // Call the TakeDamage() method on the player's damageable component
         playerDamageable.TakeDamage();
-
-        // Disable further attacks for a cooldown period
         canAttack = false;
-
-        // Start a cooldown coroutine
         StartCoroutine(ResetAttackCooldown());
     }
 
     private IEnumerator ResetAttackCooldown()
     {
         anim.SetBool("isAttack", true);
-        yield return new WaitForSeconds(attackDuration); // Change the cooldown duration as needed
+        yield return new WaitForSeconds(attackDuration);
         canAttack = true;
         anim.SetBool("isAttack", false);
-
     }
+
     private void StartBlocking()
     {
-        // Trigger the block animation or any other blocking-related behavior
-
-        // Set the isBlocking flag to true
         isBlocking = true;
     }
 
     private void StopBlocking()
     {
-        // Stop the block animation or any other blocking-related behavior
-
-        // Reset the block duration and isBlocking flag
-        blockDuration = 1f; // Change the block duration as needed
+        blockDuration = 1f;
         isBlocking = false;
     }
 
     void OnDrawGizmos()
     {
-        // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }

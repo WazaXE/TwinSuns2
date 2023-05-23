@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 5738848125882550862}
   - component: {fileID: 1626004626591144759}
   - component: {fileID: 7917556363575599519}
+  - component: {fileID: 8684992008876375381}
   m_Layer: 0
   m_Name: DeadFeathers_Prefab
   m_TagString: Untagged
@@ -246,7 +247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackRange: 2
   blockDuration: 1
-  movementSpeed: 2
+  movementSpeed: 2.5
+  detectionRange: 15
   attackDuration: 1
 --- !u!114 &1626004626591144759
 MonoBehaviour:
@@ -288,6 +290,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!208 &8684992008876375381
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720692054477521161}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1210959649585602935
 GameObject:
   m_ObjectHideFlags: 0
