@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class PlayerState 
+public class PlayerState
 {
     [HideInInspector] public StateMachine stateMachine = null;
     protected bool hasExited = false;
