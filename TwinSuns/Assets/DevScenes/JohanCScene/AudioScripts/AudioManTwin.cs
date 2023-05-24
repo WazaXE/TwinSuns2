@@ -41,6 +41,12 @@ public class AudioManTwin : MonoBehaviour
         public EventReference playerLadderClimbEvent;
         private EventInstance playerLadderClimbInstance;
 
+        public EventReference playerCrawlEvent;
+        private EventInstance playerCrawlInstance;
+
+        public EventReference playerRollWalkEvent;
+        private EventInstance playerRollWalkInstance;
+
         public void PlayerFootstepAudio(GameObject playerPlayer, string surface)
         {
             playerFootstepInstance = RuntimeManager.CreateInstance(playerFootstepEvent);
@@ -85,17 +91,74 @@ public class AudioManTwin : MonoBehaviour
 
         }
 
-        public void PlayerLandingAudio(GameObject playerPlayer)
+        public void PlayerLandingAudio(GameObject playerPlayer, string surface)
+        {
+            playerLandingInstance = RuntimeManager.CreateInstance(playerLandingEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerLandingInstance, playerPlayer.transform, playerPlayer.GetComponent<Rigidbody>());
+            switch (surface)
+            {
+                case "Sand":
+                    playerFootstepInstance.setParameterByName("Landing", 0f);
+                    break;
+                case "Stone":
+                    playerFootstepInstance.setParameterByName("Landing", 1f);
+                    break;
+                case "Wood":
+                    playerFootstepInstance.setParameterByName("Landing", 2f);
+                    break;
+                case "Gravel":
+                    playerFootstepInstance.setParameterByName("Landing", 3f);
+                    break;
+                case "Grass":
+                    playerFootstepInstance.setParameterByName("Landing", 4f);
+                    break;
+                case "Oasis":
+                    playerFootstepInstance.setParameterByName("Landing", 5f);
+                    break;
+                case "Snow":
+                    playerFootstepInstance.setParameterByName("Landing", 6f);
+                    break;
+                case "Rock & Pebbles":
+                    playerFootstepInstance.setParameterByName("Landing", 7f);
+                    break;
+                case "Lava":
+                    playerFootstepInstance.setParameterByName("Landing", 8f);
+                    break;
+            }
+
+            playerLandingInstance.start();
+
+            playerLandingInstance.release();
+            Debug.Log("playerlanding");
+
+        }
+
+
+        public void PlayerRollWalkAudio(GameObject playerPlayer)
         {
 
-                playerLandingInstance = RuntimeManager.CreateInstance(playerLandingEvent);
+            playerRollWalkInstance = RuntimeManager.CreateInstance(playerRollWalkEvent);
 
-                RuntimeManager.AttachInstanceToGameObject(playerLandingInstance, playerPlayer.transform,
-                    playerPlayer.GetComponent<Rigidbody>());
+            RuntimeManager.AttachInstanceToGameObject(playerRollWalkInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
 
-                playerLandingInstance.start();
+            playerRollWalkInstance.start();
 
-                playerLandingInstance.release(); 
+            playerRollWalkInstance.release();
+        }
+
+        public void PlayerCrawlAudio(GameObject playerPlayer)
+        {
+
+            playerCrawlInstance = RuntimeManager.CreateInstance(playerCrawlEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerCrawlInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerCrawlInstance.start();
+
+            playerCrawlInstance.release();
         }
 
         public void PlayerLadderClimbAudio(GameObject playerPlayer)
@@ -290,6 +353,8 @@ public class AudioManTwin : MonoBehaviour
         public EventReference ladderEnableEvent;
         public EventInstance ladderEnableInstance;
 
+        public EventReference buttonPressEvent;
+        public EventInstance buttonPressInstance;
 
 
         public void BoardBreakAudio(GameObject boardbreakObject)
@@ -308,6 +373,25 @@ public class AudioManTwin : MonoBehaviour
                 boardBreakInstance.start();
                 boardBreakInstance.release();
                 Debug.Log("boardbreak");
+            }
+        }
+
+        public void ButtonPressAudio(GameObject buttonPressObject)
+        {
+            if (buttonPressEvent.IsNull)
+            {
+                Debug.Log("FMOD filepath for buttonPress is missing, ask Johan to set it up at audiomanager.");
+            }
+            else
+            {
+                buttonPressInstance = RuntimeManager.CreateInstance(buttonPressEvent);
+
+                RuntimeManager.AttachInstanceToGameObject(buttonPressInstance, buttonPressObject.transform,
+                    buttonPressObject.GetComponent<Rigidbody>());
+
+                buttonPressInstance.start();
+                buttonPressInstance.release();
+                Debug.Log("buttonPress");
             }
         }
 

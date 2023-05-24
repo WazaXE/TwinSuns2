@@ -20,6 +20,15 @@ public class AudioStates : MonoBehaviour
         audioManTwin.playerAudio.PlayerFootstepAudio(playerPlayer, hit.collider.tag);
     }
 
+    public void LandingAudioPlay()
+    {
+        RaycastHit hit;
+        Physics.Raycast(playerPlayer.transform.position, Vector3.down, out hit, 7f);
+        Debug.DrawRay(playerPlayer.transform.position, Vector3.down * 7f, Color.blue, 1f);
+        //Debug.Log("We Hit: " + hit.collider.tag);
+        audioManTwin.playerAudio.PlayerLandingAudio(playerPlayer, hit.collider.tag);
+    }
+
     public void JumpAudioPlay()
     {
         audioManTwin.playerAudio.PlayerJumpAudio(playerPlayer);
@@ -110,6 +119,33 @@ public class AudioStates : MonoBehaviour
     {
         audioManTwin.enemySkeletonAudio.SkeletonFlyingAudio(this.gameObject);
     }
+
+    public void PickUpItem()
+    {
+        audioManTwin.interactablesAudio.PickUpItemAudio(this.gameObject);
+    }
+
+    public void ButtonPress()
+    {
+        audioManTwin.interactablesAudio.ButtonPressAudio(this.gameObject);
+    }
+
+    public void PlayerCrawl()
+    {
+        audioManTwin.playerAudio.PlayerCrawlAudio(this.gameObject);
+    }
+
+    public void PlayerRollWalk()
+    {
+        audioManTwin.playerAudio.PlayerRollWalkAudio(this.gameObject);
+    }
+
+    public void PlayerDeath()
+    {
+        audioManTwin.playerAudio.PlayerDeathAudio(this.gameObject);
+    }
+
+
 
 
     public void CactiFootstepPlay()
