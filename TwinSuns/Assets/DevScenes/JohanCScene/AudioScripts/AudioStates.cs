@@ -145,6 +145,35 @@ public class AudioStates : MonoBehaviour
         audioManTwin.playerAudio.PlayerDeathAudio(this.gameObject);
     }
 
+    public void PlayerEquip()
+    {
+        audioManTwin.playerAudio.PlayerEquipAudio(this.gameObject);
+    }
+
+    public void PlayerDeequip()
+    {
+        audioManTwin.playerAudio.PlayerDeequipAudio(this.gameObject);
+    }
+
+    public void PlayerEnchant()
+    {
+        audioManTwin.interactablesAudio.SwordFiredAudio(this.gameObject);
+    }
+
+    public void PlayerSwordFireCelebrate()
+    {
+        audioManTwin.interactablesAudio.SwordFiredAudio(this.gameObject);
+    }
+
+    public void PlayerCrawl2()
+    {
+        audioManTwin.playerAudio.PlayerCrawl2Audio(this.gameObject);
+    }
+
+
+
+
+
 
 
 

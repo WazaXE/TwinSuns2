@@ -44,8 +44,20 @@ public class AudioManTwin : MonoBehaviour
         public EventReference playerCrawlEvent;
         private EventInstance playerCrawlInstance;
 
+        public EventReference playerCrawl2Event;
+        private EventInstance playerCrawl2Instance;
+
         public EventReference playerRollWalkEvent;
         private EventInstance playerRollWalkInstance;
+
+        public EventReference playerEquipEvent;
+        private EventInstance playerEquipInstance;
+
+        public EventReference playerDeequipEvent;
+        private EventInstance playerDeequipInstance;
+
+        public EventReference playerEnchantEvent;
+        private EventInstance playerEnchantInstance;
 
         public void PlayerFootstepAudio(GameObject playerPlayer, string surface)
         {
@@ -148,6 +160,45 @@ public class AudioManTwin : MonoBehaviour
             playerRollWalkInstance.release();
         }
 
+        public void PlayerEnchantAudio(GameObject playerPlayer)
+        {
+
+            playerEnchantInstance = RuntimeManager.CreateInstance(playerEnchantEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerEnchantInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerEnchantInstance.start();
+
+            playerEnchantInstance.release();
+        }
+
+        public void PlayerEquipAudio(GameObject playerPlayer)
+        {
+
+            playerEquipInstance = RuntimeManager.CreateInstance(playerEquipEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerEquipInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerEquipInstance.start();
+
+            playerEquipInstance.release();
+        }
+
+        public void PlayerDeequipAudio(GameObject playerPlayer)
+        {
+
+            playerDeequipInstance = RuntimeManager.CreateInstance(playerDeequipEvent);
+
+            RuntimeManager.AttachInstanceToGameObject(playerDeequipInstance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerDeequipInstance.start();
+
+            playerDeequipInstance.release();
+        }
+
         public void PlayerCrawlAudio(GameObject playerPlayer)
         {
 
@@ -159,6 +210,19 @@ public class AudioManTwin : MonoBehaviour
             playerCrawlInstance.start();
 
             playerCrawlInstance.release();
+        }
+
+        public void PlayerCrawl2Audio(GameObject playerPlayer)
+        {
+
+            playerCrawl2Instance = RuntimeManager.CreateInstance(playerCrawl2Event);
+
+            RuntimeManager.AttachInstanceToGameObject(playerCrawl2Instance, playerPlayer.transform,
+                playerPlayer.GetComponent<Rigidbody>());
+
+            playerCrawl2Instance.start();
+
+            playerCrawl2Instance.release();
         }
 
         public void PlayerLadderClimbAudio(GameObject playerPlayer)
