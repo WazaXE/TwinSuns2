@@ -76,6 +76,16 @@ public class AudioStates : MonoBehaviour
     {
        audioManTwin.interactablesAudio.BoardDodgeAudio(playerPlayer);
     }
+
+    public void LargeMetallWall()
+    {
+        audioManTwin.interactablesAudio.MetallWallLargeAudio(this.gameObject);
+    }
+
+    public void SmallMetallWall()
+    {
+        audioManTwin.interactablesAudio.MetallWallSmallAudio(this.gameObject);
+    }
     public void PlankBreak()
     {
         audioManTwin.interactablesAudio.BoardBreakAudio(playerPlayer);
