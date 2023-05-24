@@ -2132,6 +2132,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3803009311859432687, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.15171666
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803009311859432687, guid: ce31b26169c327a4c91b184923055265,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -17.928478
       objectReference: {fileID: 0}
@@ -2727,6 +2732,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6241501248360296155, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.15259916
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241501248360296155, guid: ce31b26169c327a4c91b184923055265,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.13324365
+      objectReference: {fileID: 0}
+    - target: {fileID: 6241501248360296155, guid: ce31b26169c327a4c91b184923055265,
+        type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -18.031094
       objectReference: {fileID: 0}
@@ -2879,6 +2894,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -0.6205649
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200112301638861462, guid: ce31b26169c327a4c91b184923055265,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.149923
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200112301638861462, guid: ce31b26169c327a4c91b184923055265,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.02464353
       objectReference: {fileID: 0}
     - target: {fileID: 7492164305995322179, guid: ce31b26169c327a4c91b184923055265,
         type: 3}
@@ -9167,7 +9192,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7784201, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
