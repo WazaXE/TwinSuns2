@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class AIController : MonoBehaviour
 {
-    public float attackRange = 3f;
-    public float blockDuration = 1f;
-    public float movementSpeed = 3f;
-    public float detectionRange = 10f;
+    [SerializeField] private float attackRange = 3f;
+    [SerializeField] private float blockDuration = 1f;
+    [SerializeField] private float movementSpeed = 3f;
+    [SerializeField] private float detectionRange = 10f;
 
     [SerializeField] private float attackDuration = 1f;
 
@@ -94,17 +94,29 @@ public class AIController : MonoBehaviour
 
     private void Attack()
     {
-        playerDamageable.TakeDamage();
-        canAttack = false;
-        StartCoroutine(ResetAttackCooldown());
+        StartCoroutine(PerformAttack());
     }
 
-    private IEnumerator ResetAttackCooldown()
+    private IEnumerator PerformAttack()
     {
+        canAttack = false;
         anim.SetBool("isAttack", true);
+
         yield return new WaitForSeconds(attackDuration);
-        canAttack = true;
+
+        Vector3 directionToPlayer = playerTransform.position - transform.position;
+        float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
+
+        // Check if the player is within the attack cone
+        if (angleToPlayer <= 45f)
+        {
+            playerDamageable.TakeDamage();
+        }
+
         anim.SetBool("isAttack", false);
+        yield return new WaitForSeconds(attackDuration);
+
+        canAttack = true;
     }
 
     private void StartBlocking()
