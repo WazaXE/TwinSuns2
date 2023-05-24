@@ -101,6 +101,16 @@ public class AudioStates : MonoBehaviour
         audioManTwin.interactablesAudio.PistonBackwardsAudio(this.gameObject);
     }
 
+    public void SkeletonMelee()
+    {
+        audioManTwin.enemySkeletonAudio.SkeletonMeleeAudio(this.gameObject);
+    }
+
+    public void SkeletonFlying()
+    {
+        audioManTwin.enemySkeletonAudio.SkeletonFlyingAudio(this.gameObject);
+    }
+
 
     public void CactiFootstepPlay()
     {

@@ -1017,7 +1017,10 @@ public class AudioManTwin : MonoBehaviour
             public EventReference skeletonShieldBlockEvent;
             public EventInstance skeletonShieldBlockInstance;
 
-                public void SkeletonDeathAudio(GameObject skeletonDeathObject)
+            public EventReference skeletonFlyingEvent;
+            public EventInstance skeletonFlyingInstance;
+
+        public void SkeletonDeathAudio(GameObject skeletonDeathObject)
                 {
                     if (skeletonDeathEvent.IsNull)
                     {
@@ -1037,25 +1040,45 @@ public class AudioManTwin : MonoBehaviour
                     }
                 }
 
-            public void SkeletonMeleeAudio(GameObject skeletonMeleeObject)
+            public void SkeletonFlyingAudio(GameObject skeletonFlyingObject)
             {
-                if (skeletonMeleeEvent.IsNull)
+                if (skeletonFlyingEvent.IsNull)
                 {
-                    Debug.Log("FMOD filepath for skeletonMeleeEvent is missing, ask Johan to set it up at audiomanager.");
+                    Debug.Log("FMOD filepath for skeletonFlyingEvent is missing, ask Johan to set it up at audiomanager.");
                 }
                 else
                 {
-                    skeletonMeleeInstance = RuntimeManager.CreateInstance(skeletonMeleeEvent);
+                    skeletonFlyingInstance = RuntimeManager.CreateInstance(skeletonFlyingEvent);
 
-                    RuntimeManager.AttachInstanceToGameObject(skeletonMeleeInstance, skeletonMeleeObject.transform,
-                        skeletonMeleeObject.GetComponent<Rigidbody>());
+                    RuntimeManager.AttachInstanceToGameObject(skeletonDeathInstance, skeletonFlyingObject.transform,
+                        skeletonFlyingObject.GetComponent<Rigidbody>());
 
-                    skeletonMeleeInstance.start();
+                    skeletonFlyingInstance.start();
 
-                    skeletonMeleeInstance.release();
-                    Debug.Log("skeletonMelee");
+                    skeletonFlyingInstance.release();
+                    Debug.Log("skeletonFlying");
                 }
             }
+
+            public void SkeletonMeleeAudio(GameObject skeletonMeleeObject)
+                {
+                    if (skeletonMeleeEvent.IsNull)
+                    {
+                        Debug.Log("FMOD filepath for skeletonMeleeEvent is missing, ask Johan to set it up at audiomanager.");
+                    }
+                    else
+                    {
+                        skeletonMeleeInstance = RuntimeManager.CreateInstance(skeletonMeleeEvent);
+
+                        RuntimeManager.AttachInstanceToGameObject(skeletonMeleeInstance, skeletonMeleeObject.transform,
+                            skeletonMeleeObject.GetComponent<Rigidbody>());
+
+                        skeletonMeleeInstance.start();
+
+                        skeletonMeleeInstance.release();
+                        Debug.Log("skeletonMelee");
+                    }
+                }
 
             public void SkeletonFootstepAudio(GameObject skeletonFootstepObject, string surface)
             {
