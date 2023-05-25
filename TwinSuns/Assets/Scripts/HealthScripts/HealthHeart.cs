@@ -10,9 +10,12 @@ public class HealthHeart : MonoBehaviour
 
     Image heartImage;
 
+    private Animator anim;
+
     private void Awake()
     {
         heartImage = GetComponent<Image>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
 
@@ -26,6 +29,7 @@ public class HealthHeart : MonoBehaviour
                 break;
             case HeartStatus.Full:
                 heartImage.sprite = fullHeart;
+                anim.SetBool("isHit", false);
                 break;
         }
     }

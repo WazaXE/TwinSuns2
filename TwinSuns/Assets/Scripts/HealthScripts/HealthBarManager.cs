@@ -11,6 +11,8 @@ public class HealthBarManager : MonoBehaviour
 
     List<HealthHeart> hearts = new List<HealthHeart>();
 
+    private Animator anim;
+
     private void OnEnable()
     {
         //subscribe to event
@@ -39,7 +41,15 @@ public class HealthBarManager : MonoBehaviour
         {
             int heartStatusRemainder = (int)Mathf.Clamp(playerHealth.health - i, 0, 1);
             hearts[i].SetHeartImage((HeartStatus)heartStatusRemainder);
+
+            if (i == playerHealth.health && i < playerHealth.maxHealth)
+            {
+                anim = hearts[i].GetComponent<Animator>();
+                anim.SetBool("isHit", true);
+            }
+
         }
+
     }
 
     private void ClearHearts()
