@@ -28407,7 +28407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &826370490
 Transform:
   m_ObjectHideFlags: 0
@@ -60525,46 +60525,46 @@ MonoBehaviour:
       Path: event:/Player/Actions/Ladder_Climb_1
     playerCrawlEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1374283099
+        Data2: 1321111837
+        Data3: -1761915464
+        Data4: 1519824841
+      Path: event:/Player/Other Movement/Running_All_Four_Jump
     playerCrawl2Event:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 815034097
+        Data2: 1084724154
+        Data3: -689245291
+        Data4: -202702120
+      Path: event:/Player/Other Movement/Running_All_Four_Dash
     playerRollWalkEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1856112961
+        Data2: 1295462378
+        Data3: -1823428441
+        Data4: 1150281060
+      Path: event:/Player/Other Movement/Roll_Up_1
     playerEquipEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1086484449
+        Data2: 1206642591
+        Data3: -167406447
+        Data4: -227821470
+      Path: event:/Player/Actions/Equip_Sword_1
     playerDeequipEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 291333154
+        Data2: 1196221311
+        Data3: -149758044
+        Data4: 1101069504
+      Path: event:/Player/Actions/DeEquip_Sword_1
     playerEnchantEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 347729650
+        Data2: 1164598988
+        Data3: 1313492104
+        Data4: 1974371892
+      Path: event:/Interactables/Sword_Fire_1
   interactablesAudio:
     pickupItemEvent:
       Guid:
@@ -60680,11 +60680,11 @@ MonoBehaviour:
       Path: event:/Interactables/Ladder_Fall_Out_1
     buttonPressEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1497196403
+        Data2: 1271854117
+        Data3: -1265455201
+        Data4: 153696332
+      Path: event:/Interactables/Button_Press_1
   menuAudio:
     menuHoverEvent:
       Guid:
@@ -60710,39 +60710,39 @@ MonoBehaviour:
       Path: event:/Objects/Tumble Weed
     scrollUnfoldingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1984318606
+        Data2: 1326168078
+        Data3: 1428273303
+        Data4: -833733156
+      Path: event:/Interactables/Scroll_Open_1
     scrollFoldingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -6000832
+        Data2: 1334620868
+        Data3: 123727273
+        Data4: 114204480
+      Path: event:/Interactables/Scoll_Close_1
     bookOpenEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1405806108
+        Data2: 1083975842
+        Data3: -677338203
+        Data4: -267670546
+      Path: event:/Objects/Book_Open
     bookClosingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1488794272
+        Data2: 1178626651
+        Data3: 1430697857
+        Data4: 757678449
+      Path: event:/Objects/Book_Close
     buttonPressEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1497196403
+        Data2: 1271854117
+        Data3: -1265455201
+        Data4: 153696332
+      Path: event:/Interactables/Button_Press_1
   enemyCactiAudio:
     cactiAlertEvent:
       Guid:
@@ -60803,53 +60803,53 @@ MonoBehaviour:
   enemySkeletonAudio:
     skeletonDeathEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 222328653
+        Data2: 1310403837
+        Data3: -1437521988
+        Data4: -1646248417
+      Path: event:/Enemy Skeleton/Damage/Skeleton_Death
     skeletonMeleeEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -76974581
+        Data2: 1209887641
+        Data3: -1096616552
+        Data4: -1138061878
+      Path: event:/Enemy Skeleton/Damage/Skeleton_Sword_ATK
     skeletonFootstepEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 619457818
+        Data2: 1162973239
+        Data3: 1527284138
+        Data4: 1876178314
+      Path: event:/Enemy Skeleton/Movement/Skeleton_Footstep
     skeletonDamagedEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -262848088
+        Data2: 1166307780
+        Data3: -2020037474
+        Data4: 1393819452
+      Path: event:/Enemy Skeleton/Damage/Skeleton_Damaged
     skeletonShieldBreakEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1955304263
+        Data2: 1185826217
+        Data3: -1590580557
+        Data4: -469475520
+      Path: event:/Enemy Skeleton/Shield/Skeleton_Shield_Break
     skeletonShieldBlockEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1062699234
+        Data2: 1317454241
+        Data3: 1737833137
+        Data4: -1373129441
+      Path: event:/Enemy Skeleton/Shield/Skeleton_Shield_Block
     skeletonFlyingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1472039195
+        Data2: 1079547007
+        Data3: 1273724081
+        Data4: -746320526
+      Path: event:/Enemy Skeleton/Movement/Skeleton_Flying
   golemThrowerAudio:
     golemThrowerEvent:
       Guid:
@@ -75545,7 +75545,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7670251, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
