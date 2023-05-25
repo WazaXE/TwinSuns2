@@ -306,6 +306,48 @@ MonoBehaviour:
         Data3: 1285757099
         Data4: 1606380355
       Path: event:/Player/Actions/Ladder_Climb_1
+    playerCrawlEvent:
+      Guid:
+        Data1: 1374283099
+        Data2: 1321111837
+        Data3: -1761915464
+        Data4: 1519824841
+      Path: event:/Player/Other Movement/Running_All_Four_Jump
+    playerCrawl2Event:
+      Guid:
+        Data1: 815034097
+        Data2: 1084724154
+        Data3: -689245291
+        Data4: -202702120
+      Path: event:/Player/Other Movement/Running_All_Four_Dash
+    playerRollWalkEvent:
+      Guid:
+        Data1: -1856112961
+        Data2: 1295462378
+        Data3: -1823428441
+        Data4: 1150281060
+      Path: event:/Player/Other Movement/Roll_Up_1
+    playerEquipEvent:
+      Guid:
+        Data1: 1086484449
+        Data2: 1206642591
+        Data3: -167406447
+        Data4: -227821470
+      Path: event:/Player/Actions/Equip_Sword_1
+    playerDeequipEvent:
+      Guid:
+        Data1: 291333154
+        Data2: 1196221311
+        Data3: -149758044
+        Data4: 1101069504
+      Path: event:/Player/Actions/DeEquip_Sword_1
+    playerEnchantEvent:
+      Guid:
+        Data1: 347729650
+        Data2: 1164598988
+        Data3: 1313492104
+        Data4: 1974371892
+      Path: event:/Interactables/Sword_Fire_1
   interactablesAudio:
     pickupItemEvent:
       Guid:
@@ -323,46 +365,46 @@ MonoBehaviour:
       Path: event:/Interactables/Pickup_Coin_Bag_1
     cactusDestroyedEvent:
       Guid:
-        Data1: 922519784
-        Data2: 1194919365
-        Data3: -1946235218
-        Data4: -1158279764
+        Data1: -1838876834
+        Data2: 1268032333
+        Data3: -1464782689
+        Data4: -1436941035
       Path: event:/Interactables/Melee_Wood_Impact_1
     buildingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -370595280
+        Data2: 1128606862
+        Data3: -1757871963
+        Data4: 126971624
+      Path: event:/Interactables/Hammering_Wood_1
     boardBreakEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 325845357
+        Data2: 1339917419
+        Data3: 1979191479
+        Data4: -309451888
+      Path: event:/Interactables/Wood_Board_Break_1
     boardDodgeEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 159528339
+        Data2: 1201596747
+        Data3: 633167278
+        Data4: -1399724709
+      Path: event:/Interactables/Wood_Board_Dodge_1
     boardFireEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1955673293
+        Data2: 1280452175
+        Data3: -1153078354
+        Data4: -611454237
+      Path: event:/Interactables/Wood_Board_Fire_1
     lightTempleEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1104288882
+        Data2: 1308025420
+        Data3: -245962306
+        Data4: -469207993
+      Path: event:/Objects/Lights_ON
     swordFiredEvent:
       Guid:
         Data1: 347729650
@@ -372,46 +414,46 @@ MonoBehaviour:
       Path: event:/Interactables/Sword_Fire_1
     CheckpointEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 366203773
+        Data2: 1129124622
+        Data3: 1621338254
+        Data4: 292870957
+      Path: event:/Checkpoints/Water_Well_CP_1
     metallWallLargeEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -287246127
+        Data2: 1293713828
+        Data3: 642490799
+        Data4: 681592397
+      Path: event:/Interactables/Metall_Wall_Large_1
     metallWallSmallEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 645355496
+        Data2: 1081128449
+        Data3: 1088315280
+        Data4: -1944772326
+      Path: event:/Interactables/Metall_Wall_Small_1
     wallThrowerEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -32821663
+        Data2: 1083245145
+        Data3: 50923430
+        Data4: 424464878
+      Path: event:/Objects/Fireball_Loop
     pistonForwardEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1053299362
+        Data2: 1229983415
+        Data3: -1504065352
+        Data4: 1760071076
+      Path: event:/Interactables/Piston_Forward_1
     pistonBackwardsEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1769446794
+        Data2: 1273724793
+        Data3: -1268768633
+        Data4: -896892013
+      Path: event:/Interactables/Piston_Backward_1
     ladderEnableEvent:
       Guid:
         Data1: -1816378525
@@ -419,64 +461,71 @@ MonoBehaviour:
         Data3: 323841969
         Data4: -662324869
       Path: event:/Interactables/Ladder_Fall_Out_1
+    buttonPressEvent:
+      Guid:
+        Data1: 559805233
+        Data2: 1281080494
+        Data3: -82099553
+        Data4: -123716682
+      Path: event:/Interactables/Large_Button_Press_1
   menuAudio:
     menuHoverEvent:
       Guid:
-        Data1: -1298014856
-        Data2: 1316865610
-        Data3: 1670502274
-        Data4: 104873924
+        Data1: -324280641
+        Data2: 1232433312
+        Data3: 115571076
+        Data4: 41592092
       Path: event:/Menu/Menu_Hover/Menu_Hover
     menuPressEvent:
       Guid:
-        Data1: -1159499154
-        Data2: 1177410652
-        Data3: 103768969
-        Data4: 503066466
+        Data1: -1903519290
+        Data2: 1256231408
+        Data3: 1038062210
+        Data4: -974715233
       Path: event:/Menu/Menu_Press/Menu_Press
   objectAudio:
     weedThumbleEvent:
       Guid:
-        Data1: 1220287313
-        Data2: 1145022467
-        Data3: -1366698362
-        Data4: 105527233
+        Data1: 323186529
+        Data2: 1279651997
+        Data3: -669500023
+        Data4: -1921750192
       Path: event:/Objects/Tumble Weed
     scrollUnfoldingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1984318606
+        Data2: 1326168078
+        Data3: 1428273303
+        Data4: -833733156
+      Path: event:/Interactables/Scroll_Open_1
     scrollFoldingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -6000832
+        Data2: 1334620868
+        Data3: 123727273
+        Data4: 114204480
+      Path: event:/Interactables/Scoll_Close_1
     bookOpenEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1405806108
+        Data2: 1083975842
+        Data3: -677338203
+        Data4: -267670546
+      Path: event:/Objects/Book_Open
     bookClosingEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1488794272
+        Data2: 1178626651
+        Data3: 1430697857
+        Data4: 757678449
+      Path: event:/Objects/Book_Close
     buttonPressEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 559805233
+        Data2: 1281080494
+        Data3: -82099553
+        Data4: -123716682
+      Path: event:/Interactables/Large_Button_Press_1
   enemyCactiAudio:
     cactiAlertEvent:
       Guid:
@@ -537,18 +586,18 @@ MonoBehaviour:
   enemySkeletonAudio:
     skeletonDeathEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 222328653
+        Data2: 1310403837
+        Data3: -1437521988
+        Data4: -1646248417
+      Path: event:/Enemy Skeleton/Damage/Skeleton_Death
     skeletonMeleeEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -76974581
+        Data2: 1209887641
+        Data3: -1096616552
+        Data4: -1138061878
+      Path: event:/Enemy Skeleton/Damage/Skeleton_Sword_ATK
     skeletonFootstepEvent:
       Guid:
         Data1: 0
@@ -558,11 +607,11 @@ MonoBehaviour:
       Path: 
     skeletonDamagedEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -262848088
+        Data2: 1166307780
+        Data3: -2020037474
+        Data4: 1393819452
+      Path: event:/Enemy Skeleton/Damage/Skeleton_Damaged
     skeletonShieldBreakEvent:
       Guid:
         Data1: 0
@@ -577,6 +626,13 @@ MonoBehaviour:
         Data3: 0
         Data4: 0
       Path: 
+    skeletonFlyingEvent:
+      Guid:
+        Data1: 1472039195
+        Data2: 1079547007
+        Data3: 1273724081
+        Data4: -746320526
+      Path: event:/Enemy Skeleton/Movement/Skeleton_Flying
   golemThrowerAudio:
     golemThrowerEvent:
       Guid:
@@ -3941,7 +3997,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0716846, y: 1}
+    m_SensorSize: {x: 1.7670251, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
