@@ -10,7 +10,9 @@ public class AIController : MonoBehaviour
     [SerializeField] private float movementSpeed = 3f;
     [SerializeField] private float detectionRange = 10f;
 
-    [SerializeField] private float attackDuration = 1f;
+    [SerializeField] private float attackDuration = 1.5f;
+
+    [SerializeField] private float dealDamage = 1f;
 
     private bool isBlocking = false;
     private bool canAttack = true;
@@ -102,7 +104,7 @@ public class AIController : MonoBehaviour
         canAttack = false;
         anim.SetBool("isAttack", true);
 
-        yield return new WaitForSeconds(attackDuration);
+        yield return new WaitForSeconds(dealDamage);
 
         Vector3 directionToPlayer = playerTransform.position - transform.position;
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
