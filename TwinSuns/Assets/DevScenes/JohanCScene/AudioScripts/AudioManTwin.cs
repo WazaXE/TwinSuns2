@@ -1451,11 +1451,24 @@ public class AudioManTwin : MonoBehaviour
 
     }
 
+    public void TempleLit()
+    {
+        interactablesAudio.LightTempleAudio(this.gameObject);
+    }
 
-    
+    public void bookOpen()
+    {
+        objectAudio.BookOpenAudio(this.gameObject);
+    }
+
+    public void bookClose()
+    {
+        objectAudio.BookClosingAudio(this.gameObject);
+    }
 
 
-        public PlayerAudio playerAudio;
+
+    public PlayerAudio playerAudio;
         public InteractablesAudio interactablesAudio;
         public MenuAudio menuAudio;
         public ObjectAudio objectAudio;
