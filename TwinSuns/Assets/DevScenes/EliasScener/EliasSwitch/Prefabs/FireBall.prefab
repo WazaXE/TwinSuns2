@@ -247,11 +247,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 818259625
-      Data2: 1282167634
-      Data3: -1375556448
-      Data4: 1000764733
-    Path: event:/Objects/Torch
+      Data1: 1623602466
+      Data2: 1268445964
+      Data3: 1065712011
+      Data4: 447666112
+    Path: event:/Player/Weapons/Player_Fireball_1
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -261,8 +261,8 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 3.84
-  OverrideMaxDistance: 11
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!65 &4322628984016733904
 BoxCollider:
   m_ObjectHideFlags: 0

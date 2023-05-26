@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using FMOD.Studio;
+using FMODUnity;
 
 [RequireComponent(typeof(Collider))]
 public class NewDialogueTrigger : MonoBehaviour, IInteractable
@@ -28,6 +30,12 @@ public class NewDialogueTrigger : MonoBehaviour, IInteractable
 
     public UnityEvent dialogueTriggered;
 
+    public UnityEvent dialogueExit;
+   
+
+    [SerializeField]
+    private EventChannel eventChannel;
+
     private void Awake()
     {
         visualCue.SetActive(false);
@@ -49,6 +57,7 @@ public class NewDialogueTrigger : MonoBehaviour, IInteractable
         {
             DialogueManager.GetInstance().EnterDialogueMode(inkJSON, leftSprite, rightSprite);
             dialogueTriggered?.Invoke();
+            eventChannel.OnDialogueEndEvent += OnDialogueEnd;
 
             if (isOneshot)
             {
@@ -72,6 +81,7 @@ public class NewDialogueTrigger : MonoBehaviour, IInteractable
         {
             DialogueManager.GetInstance().EnterDialogueMode(inkJSON, leftSprite, rightSprite);
             dialogueTriggered?.Invoke();
+            eventChannel.OnDialogueEndEvent += OnDialogueEnd;
 
             if (isOneshot)
             {
@@ -84,5 +94,9 @@ public class NewDialogueTrigger : MonoBehaviour, IInteractable
         return transform.position;
     }
 
-
+    public void OnDialogueEnd()
+    {
+        dialogueExit?.Invoke();
+        eventChannel.OnDialogueEndEvent -= OnDialogueEnd;
+    }
 }

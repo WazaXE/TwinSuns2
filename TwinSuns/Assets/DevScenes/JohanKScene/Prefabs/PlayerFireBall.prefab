@@ -206,7 +206,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7207479901854172092}
-  - component: {fileID: 7840470152286497852}
   - component: {fileID: 8043885837457194549}
   - component: {fileID: 173859165343257748}
   - component: {fileID: 3733938060877378203}
@@ -234,37 +233,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
---- !u!114 &7840470152286497852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4093684414411802201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 818259625
-      Data2: 1282167634
-      Data3: -1375556448
-      Data4: 1000764733
-    Path: event:/Objects/Torch
-  Event: 
-  PlayEvent: 1
-  StopEvent: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  AllowNonRigidbodyDoppler: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 3.84
-  OverrideMaxDistance: 11
 --- !u!54 &8043885837457194549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -309,6 +277,13 @@ MonoBehaviour:
   speed: 15
   damageAmount: 15
   damageType: 1
+  fireballsound:
+    Guid:
+      Data1: 1623602466
+      Data2: 1268445964
+      Data3: 1065712011
+      Data4: 447666112
+    Path: event:/Player/Weapons/Player_Fireball_1
 --- !u!1001 &493988011413021352
 PrefabInstance:
   m_ObjectHideFlags: 0

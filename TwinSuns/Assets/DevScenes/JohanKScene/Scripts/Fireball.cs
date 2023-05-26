@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 public class Fireball : MonoBehaviour
 {
@@ -10,10 +12,14 @@ public class Fireball : MonoBehaviour
 
     private Vector3 direction;
     private Rigidbody rb;
-
+    public EventReference fireballsound;
+    public EventInstance fireballInstance;
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        fireballInstance = FMODUnity.RuntimeManager.CreateInstance(fireballsound);
+        fireballInstance.start();
+        fireballInstance.release();
     }
 
     public void Launch()
