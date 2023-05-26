@@ -353,7 +353,10 @@ public class DialogueManager : MonoBehaviour
         return variableValue;
     }
 
-
+    public void SetVariable(string variableName, bool variableBool)
+    {
+        currentStory.variablesState[variableName] = variableBool;
+    }
 
     //Call this whenever you want the application to end
     public void OnApplicationQuit()

@@ -9,21 +9,13 @@ using Ink.Runtime;
 public class FetchQuest : MonoBehaviour
 {
 
-   
-
+    [SerializeField] private DialogueManager manager;   
+    
 
     [SerializeField] private string variableName;
     [SerializeField] private bool variableBoolValue;
 
-    [SerializeField] private TextAsset inkAsset;
 
-    private Story inkStory;
-
-    private void Awake()
-    {
-        string inkText = inkAsset.text;
-        inkStory = new Story(inkText);
-    }
 
 
 
@@ -35,7 +27,7 @@ public class FetchQuest : MonoBehaviour
 
         if (collided != null)
         {
-            inkStory.variablesState[variableName] = variableBoolValue;
+            manager.SetVariable(variableName, variableBoolValue);
 
             Destroy(this.gameObject);
         }
