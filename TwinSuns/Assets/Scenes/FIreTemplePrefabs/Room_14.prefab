@@ -1088,7 +1088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8800980481593782806}
   - component: {fileID: 679157989623662325}
-  - component: {fileID: 4415915751334671815}
+  - component: {fileID: 8212253008118549069}
   m_Layer: 0
   m_Name: SpeechBubble
   m_TagString: Untagged
@@ -1164,7 +1164,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4415915751334671815
+--- !u!114 &8212253008118549069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1176,18 +1176,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3be1e51a110c2c4d8426dbdd51f0af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barkText: {fileID: 482525179366428321}
+  barkText: {fileID: 0}
   barkTexts:
-  - <b>The Peak</b> - A blessing has come! A gift to be sure! The gossip of some,
-    both young and mature,
-  - 'A child has been born, an heir to the throne, The Sultan is torn, in grief all
-    alone, '
-  - 'His wife taken ill, not long after birth, No longer he will, sing songs full
-    of mirth, '
-  - "A plague sweeps the land, through house and through sand, The wisest still struggle,
-    they can\u2019t understand, "
-  - 'The palace is quiet, the Sultan as well, No man can defy it, no mortal can tell, '
-  - 'When death takes a hold of kin and of friend, Even the bold cannot see the end. '
+  - '<b>The Rise</b> - Born and raised to lead, sworn to never concede, A noble by
+    virtue, but common by birth; true, '
+  - 'A man with a proud heart, they called him an upstart, Long may he reign! As
+    long as fate deigns, '
+  - 'His rule to be just, his sword without rust, Hail the Sultan! Long live his
+    kin! '
+  - 'We shouted and cheered him after each win, While evil was creeping from deeper
+    within, '
+  - Planting the seed that would bloom into sin.
   random: 0
   timedBarks: 1
   timeBetweenBarks: 5
