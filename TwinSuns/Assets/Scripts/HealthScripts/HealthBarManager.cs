@@ -42,6 +42,13 @@ public class HealthBarManager : MonoBehaviour
             int heartStatusRemainder = (int)Mathf.Clamp(playerHealth.health - i, 0, 1);
             hearts[i].SetHeartImage((HeartStatus)heartStatusRemainder);
 
+            if (heartStatusRemainder > 0)
+            {
+                anim = hearts[i].GetComponent<Animator>();
+                anim.SetBool("isFull", true);
+            }
+
+
             if (i == playerHealth.health && i < playerHealth.maxHealth)
             {
                 anim = hearts[i].GetComponent<Animator>();
