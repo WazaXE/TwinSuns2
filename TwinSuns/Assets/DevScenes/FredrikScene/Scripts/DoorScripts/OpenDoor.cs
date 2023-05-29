@@ -5,41 +5,22 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
 
-    private Animation anim;
+    public bool buttonOnePressed;
+    public bool buttonTwoPressed;
 
-    private bool insideCollider = false;
+    private Animator anim;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        anim = gameObject.GetComponent<Animation>();
+        anim = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J) && insideCollider)
+        if (buttonOnePressed && buttonTwoPressed)
         {
-            anim.Play("OpenDoor");
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.gameObject.CompareTag("Player"))
-        {
-            insideCollider = true;
-        }
-
-
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            insideCollider = false;
+            anim.SetBool("isOpen", true);
         }
     }
 

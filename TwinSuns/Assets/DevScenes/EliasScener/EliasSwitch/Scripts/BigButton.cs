@@ -14,47 +14,45 @@ public class BigButton : MonoBehaviour, IInteractable
 
     public UnityEvent buttonPressed;
 
-    [SerializeField] private Animator bigDoor1;
-    [SerializeField] private Animator bigDoor2;
-    [SerializeField] private GameObject lamp1;
-    [SerializeField] private GameObject lamp2;
-    private Animator animator;
-    private string name;
 
-    private void Start()
+    private Animator animatorOfButton;
+
+    private void Awake()
     {
-        // Get the animator component on this object
-        animator = GetComponent<Animator>();
-        name = gameObject.name;
-
+        animatorOfButton = GetComponent<Animator>();
     }
-
 
     public void OnInteractionClick()
     {
         buttonPressed?.Invoke();
 
-            if (name == "BigButton1")
-            {
-                animator.SetBool("IsClick", true);
-                bigDoor1.SetBool("door1", true);
-                bigDoor2.SetBool("door1", true);
-                lamp1.GetComponent<Renderer>().material.color = Color.green;
+        animatorOfButton.SetBool("IsClick", true);
 
-            }
-            else
-            {
-                animator.SetBool("IsClick", true);
-                bigDoor1.SetBool("door2", true);
-                bigDoor2.SetBool("door2", true);
-                lamp2.GetComponent<Renderer>().material.color = Color.green;
-
-            }
+        UpdateOpenDoorScript();
 
 
     }
 
-           
+    private void UpdateOpenDoorScript()
+    {
+        // Find the OpenDoor script in the scene
+        OpenDoor openDoorScript = FindObjectOfType<OpenDoor>();
+
+        // Update the button pressed variables
+        if (openDoorScript != null)
+        {
+            if (gameObject.name == "BigButton1")
+            {
+                openDoorScript.buttonOnePressed = true;
+            }
+            else if (gameObject.name == "BigButton2")
+            {
+                openDoorScript.buttonTwoPressed = true;
+            }
+        }
+    }
+
+
 
     public void InteractInRange()
     {
