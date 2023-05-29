@@ -10,7 +10,10 @@ public class NimThoughtBubble : MonoBehaviour
     [SerializeField] private GameObject thoughtBubble;
     [SerializeField] private string nimThoughtText;
     [SerializeField] private float timeUntilGone;
+    [SerializeField] private bool oneShot;
 
+
+    private bool firstTime = true;
     private bool isActive;
     private float mark;
 
@@ -25,10 +28,15 @@ public class NimThoughtBubble : MonoBehaviour
 
         if (collided != null)
         {
-            mark = Time.time;
-            isActive = true;
-            nimTextBox.text = nimThoughtText;
-            thoughtBubble.SetActive(true);
+            if ((oneShot && firstTime) || !oneShot)
+            {
+                mark = Time.time;
+                isActive = true;
+                nimTextBox.text = nimThoughtText;
+                thoughtBubble.SetActive(true);
+                firstTime = false;
+            }
+
         }
 
 
