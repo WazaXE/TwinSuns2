@@ -15645,6 +15645,7 @@ Transform:
   - {fileID: 1378398345}
   - {fileID: 1242786676}
   - {fileID: 1297611212}
+  - {fileID: 1050186305}
   m_Father: {fileID: 1540755987}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36633,6 +36634,121 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8486981812890098893, guid: 2d551f932eaed5d4fb3b942170fd148e,
     type: 3}
   m_PrefabInstance: {fileID: 1047742596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1050186304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 442896066}
+    m_Modifications:
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1686751886}
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CactusDestroyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SoundEventHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302724659744736923, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: CactusDestroyedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475009145191014709, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_Name
+      value: ACactusLarge Variant (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7475009145191014709, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5078588
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -19.809063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.24681
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.45868778
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.88859755
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -125.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f7b8cfa43af244446ba695315a0abcde, type: 3}
+--- !u!4 &1050186305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7851816605248420751, guid: f7b8cfa43af244446ba695315a0abcde,
+    type: 3}
+  m_PrefabInstance: {fileID: 1050186304}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1053196831 stripped
 Transform:
