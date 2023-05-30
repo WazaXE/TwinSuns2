@@ -17,7 +17,7 @@ public class ShootFireBall : MonoBehaviour
         float elapsedTime = Time.time - mark;
 
         // Check if the RT button is pressed
-        if (Input.GetButtonDown("Jump") && (elapsedTime > coolDown))
+        if (Input.GetButtonDown("Shoot") && (elapsedTime > coolDown))
         {
             ShootFireball();
             mark = Time.time;
