@@ -22,10 +22,21 @@ public class PlayerHealthManager : MonoBehaviour, IPlayerDamageable
         //Set health to max health on game start
         health = maxHealth;
 
-        //Invoke event to refresh health so that it displays correct
+        //Invoke event to refresh health so that it displays correctly
         OnPlayerDamaged?.Invoke();
 
         if (checkPointHandler == null) checkPointHandler = FindObjectOfType<CheckPointHandler>();
+
+        // Subscribe to the OnPlayerSave event
+        WellSave.OnPlayerSave += RestoreHealth;
+
+
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from the OnPlayerSave event
+        WellSave.OnPlayerSave -= RestoreHealth;
     }
 
     public void TakeDamage()

@@ -18,15 +18,25 @@ public class WellSave : MonoBehaviour, IInteractable
     [SerializeField] private GameObject wellBadWater;
     [SerializeField] private GameObject wellClearWater;
 
-    private bool firstInteract;
+    private bool firstInteract = true;
+
+    [SerializeField] private GameObject visualCue;
 
     public void OnInteractionClick()
     {
-        if (!firstInteract)
+        if (firstInteract)
         {
             wellBadWater.SetActive(false);
             wellClearWater.SetActive(true);
+
+            // Trigger the OnPlayerSave event
+            OnPlayerSave?.Invoke();
         }
+        else
+        {
+            OnPlayerSave?.Invoke();
+        }
+
     }
 
     private void Toggler()
@@ -35,11 +45,11 @@ public class WellSave : MonoBehaviour, IInteractable
     }
     public void InteractInRange()
     {
-
+        visualCue.SetActive(true);
     }
     public void InteractOutOfRange()
     {
-
+        visualCue.SetActive(false);
     }
     public Vector3 ReturnPosition()
     {
