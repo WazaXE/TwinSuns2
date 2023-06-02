@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public DashCooldownUI dashCooldownUI;
-    public StateMachine playerStateMachine;
+    [SerializeField] private DashCooldownUI dashCooldownUI;
+    [SerializeField] private StateMachine playerStateMachine;
 
     private void Start()
     {
