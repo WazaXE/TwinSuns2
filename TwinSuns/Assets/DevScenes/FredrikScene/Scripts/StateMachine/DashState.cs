@@ -20,6 +20,9 @@ public class DashState : PlayerState
 
     public AnimationCurve speedCurve;
 
+    //Event to update UI
+    public event Action<float> OnEnterDashState;
+
     private Vector3 dir;
 
     private Vector3 Dir
@@ -50,6 +53,10 @@ public class DashState : PlayerState
     public override void Enter()
     {
         stateMachine.animator.SetTrigger("Roll");
+
+        // Trigger the event with the dashCooldown value
+        OnEnterDashState?.Invoke(coolDown);
+
 
 
         Vector2 leftStick = stateMachine.move.ReadValue<Vector2>();
@@ -88,19 +95,22 @@ public class DashState : PlayerState
 
     public override void FixedUpdate()
     {
-
         if (timer > dashTime)
         {
             if (stateMachine.inCombat)
             {
                 stateMachine.Transit(stateMachine.combatState);
-                return;
             }
-            stateMachine.Transit(stateMachine.freeState);
+            else
+            {
+                stateMachine.Transit(stateMachine.freeState);
+            }
             return;
         }
+
         Roll();
         timer += Time.fixedDeltaTime;
+
     }
 
     private void Roll()
