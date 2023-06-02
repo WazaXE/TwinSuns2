@@ -18,6 +18,8 @@ public class PistonButton : MonoBehaviour, IInteractable
 
     private Animator animatorOfButton;
 
+    [SerializeField] private GameObject visualCue;
+
 
     private void Start()
     {
@@ -34,6 +36,8 @@ public class PistonButton : MonoBehaviour, IInteractable
 
         animator.SetBool(nameOfParameter, boolValue);
 
+        visualCue.SetActive(false);
+
         Destroy(this);
     }
 
@@ -41,12 +45,11 @@ public class PistonButton : MonoBehaviour, IInteractable
 
     public void InteractInRange()
     {
-
+        visualCue.SetActive(true);
     }
 
     public void InteractOutOfRange()
     {
-
     }
 
     public Vector3 ReturnPosition()

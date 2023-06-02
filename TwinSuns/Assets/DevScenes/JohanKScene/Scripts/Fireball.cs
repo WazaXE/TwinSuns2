@@ -43,17 +43,16 @@ public class Fireball : MonoBehaviour
 
         // Perform a raycast from the current position to the new position
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, speed * Time.deltaTime))
+        int layerMask = LayerMask.GetMask("Enviroment"); // Set the layer mask to the "Environment" layer
+        if (Physics.Raycast(transform.position, transform.forward, out hit, speed * Time.deltaTime, layerMask))
         {
-            // Check if the raycast hit an object with the "Environment" tag
-            if (hit.collider.CompareTag("Enviroment"))
+            // Check if the raycast hit an object on the "Environment" layer
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Enviroment"))
             {
                 Debug.Log("Collided with Environment");
                 // Destroy the fireball upon collision with any object
                 Destroy(gameObject);
             }
-
-
         }
         else
         {

@@ -8661,6 +8661,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ce0c01ee5143e8428a89f55fa8dcb59, type: 3}
+--- !u!1 &2543461112345664978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7804917322184087230, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
+    type: 3}
+  m_PrefabInstance: {fileID: 5700592393492974444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3553882950697780714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9101070209461636742, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
@@ -8701,6 +8707,7 @@ MonoBehaviour:
   animator: {fileID: 2318508247260876131}
   nameOfParameter: out
   boolValue: 0
+  visualCue: {fileID: 2543461112345664978}
 --- !u!1001 &6487606694766017783
 PrefabInstance:
   m_ObjectHideFlags: 0

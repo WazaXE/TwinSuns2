@@ -975,12 +975,12 @@ PrefabInstance:
     - target: {fileID: 9101070209461636742, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.316246
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9101070209461636742, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4203339
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 9101070209461636742, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
         type: 3}
@@ -1025,6 +1025,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6281137454221726037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4286221572514695147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7804917322184087230, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
+    type: 3}
+  m_PrefabInstance: {fileID: 6281137454221726037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5599387550340634924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1917988578244544633, guid: 4ce0c01ee5143e8428a89f55fa8dcb59,
@@ -1046,6 +1052,7 @@ MonoBehaviour:
   animator: {fileID: 2292608116618842342}
   nameOfParameter: out
   boolValue: 0
+  visualCue: {fileID: 4286221572514695147}
 --- !u!1001 &6321957749681682597
 PrefabInstance:
   m_ObjectHideFlags: 0
