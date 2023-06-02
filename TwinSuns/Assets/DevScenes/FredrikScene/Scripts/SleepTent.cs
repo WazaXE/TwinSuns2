@@ -23,13 +23,15 @@ public class SleepTent : MonoBehaviour, IInteractable
     private bool needToBeInside;
     public bool NeedToBeInside => needToBeInside;
 
-    [SerializeField] private GameObject exitDialogue;
+    [SerializeField] private GameObject exitDialogue, visualCue;
 
 
     //Start is called before the first frame update
     void Start()
     {
         cameraFade = FindObjectOfType<CameraFade>();
+
+        visualCue.SetActive(false);
     }
 
     //Update is called once per frame
@@ -61,11 +63,11 @@ public class SleepTent : MonoBehaviour, IInteractable
     }
     public void InteractInRange()
     {
-
+        visualCue.SetActive(true);
     }
     public void InteractOutOfRange()
     {
-
+        visualCue.SetActive(false);
     }
     public Vector3 ReturnPosition()
     {
