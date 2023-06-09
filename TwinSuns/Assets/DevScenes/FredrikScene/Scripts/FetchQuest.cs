@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
-
-
+using System;
 
 [RequireComponent(typeof(Collider))]
 public class FetchQuest : MonoBehaviour
@@ -16,9 +15,9 @@ public class FetchQuest : MonoBehaviour
     [SerializeField] private bool variableBoolValue;
 
 
+    public static event Action<string> OnItemPickUp;
 
-
-
+    [SerializeField] private string itemID;
 
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +27,8 @@ public class FetchQuest : MonoBehaviour
         if (collided != null)
         {
             manager.SetVariable(variableName, variableBoolValue);
+
+            OnItemPickUp?.Invoke(itemID);
 
             Destroy(this.gameObject);
         }

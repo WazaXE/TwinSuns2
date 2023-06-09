@@ -5,6 +5,10 @@ using UnityEngine.AI;
 
 public class AIController : MonoBehaviour
 {
+
+    public int ID { get; set; }
+
+
     [SerializeField] private float attackRange = 3f;
     [SerializeField] private float blockDuration = 1f;
     [SerializeField] private float movementSpeed = 3f;
@@ -33,6 +37,8 @@ public class AIController : MonoBehaviour
 
         navMeshAgent.enabled = false;
         navMeshObstacle.enabled = true;
+
+        ID = 0;
     }
 
     private void Update()

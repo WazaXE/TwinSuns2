@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AIDamageable : MonoBehaviour, IDamageable
 {
+    public int ID { get; set; }
+
     [SerializeField] private Shader whiteShader;  // The shader to switch to when hit
     private Shader originalShader;  // The original shader of the enemy
     [SerializeField] private Renderer enemyRenderer;  // Reference to the enemy's renderer component
@@ -12,6 +15,8 @@ public class AIDamageable : MonoBehaviour, IDamageable
     public int currentHealth;
 
     [SerializeField] private float durationOfHit = 1f;
+
+    public static event Action<int> OnEnemyDeath;
 
     private void Start()
     {
@@ -46,6 +51,7 @@ public class AIDamageable : MonoBehaviour, IDamageable
 
     private void Die()
     {
+        OnEnemyDeath?.Invoke(ID);
         Destroy(gameObject);
     }
 }
